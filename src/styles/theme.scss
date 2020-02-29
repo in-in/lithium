@@ -1,0 +1,27 @@
+@use 'config' as *;
+
+:root {
+	--border_radius: #{rem($border_radius)};
+	--transition_duration: 0.4s;
+	--transition_easeing: ease-in-out;
+
+	@include breakpoint(xl) {
+		--border_radius: #{t2c($border_radius, xl)};
+	}
+}
+
+*:focus {
+	outline: none !important;
+	box-shadow:
+		0 0 0 rem(2) lightcoral,
+		0 0 0 rem(6) lightpink !important;
+}
+
+BODY {
+	background-color: whitesmoke;
+	font-family: $font_secondary;
+}
+
+::selection {
+	background-color: lightyellow;
+}

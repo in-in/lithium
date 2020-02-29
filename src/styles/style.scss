@@ -1,0 +1,12 @@
+@forward 'theme';
+@use "config" as *;
+@use 'button/style';
+
+$color: coral;
+
+h1 {
+	background-color: $color;
+	font-family: $font_main;
+	font-size: 3em;
+	line-height: 1.1;
+}

@@ -1,0 +1,10 @@
+@use "config" as *;
+
+$font_size: rem(24);
+
+.btn {
+	color: crimson;
+	background-color: lightseagreen;
+	font-size: $font_size;
+	text-transform: uppercase;
+}

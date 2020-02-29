@@ -1,0 +1,109 @@
+@use 'sass:map';
+@use 'sass:string';
+@use 'sass:color';
+@use 'functions' as *;
+@use 'vars' as *;
+
+@mixin breakpoint($size) {
+	@if map.get($sizes, $size) {
+		@media (min-width: map.get($sizes, $size) + px) {
+			@content;
+		}
+	}
+
+	@else {
+		@error 'Unknown size: #{$size}';
+	}
+}
+
+@mixin font_face($name, $filename, $weight: 400, $style: normal, $ext: woff2) {
+	@font-face {
+		font-family: string.quote($name);
+		font-weight: $weight;
+		font-style: $style;
+		font-display: swap;
+		src:
+			url(string.quote("../assets/fonts/" + $filename + "." + $ext))
+			format(string.quote($ext));
+	}
+}
+
+@mixin hover_transition() {
+	transition-property: background-color, color, fill;
+	transition-duration: var(--transition_duration);
+	transition-timing-function: var(--transition_easeing);
+}
+
+@mixin hover($selector: null, $combinator: ' ') {
+	@if $selector {
+		#{$selector} {
+			@include hover_transition();
+		}
+	}
+
+	@else {
+		@include hover_transition();
+	}
+
+	@media (hover: hover) {
+		&:hover#{$combinator}#{$selector} {
+			@content;
+		}
+	}
+}
+
+@mixin active($color) {
+	background-position: center;
+	background-image:
+		radial-gradient(
+			circle,
+			$crystal calc(1% - 1px),
+			color.scale($color, $lightness: -50%) 1%
+		);
+	background-size: 15000%;
+	transition-property: background-size;
+	transition-duration: calc(var(--transition_duration) / 2);
+
+	&:active {
+		background-color: $crystal;
+		background-size: 100%;
+		color: color.scale($color, $lightness: 80%);
+		transition-property: background-size;
+		transition-duration: 0s;
+	}
+}
+
+@mixin truncate_multiline_text(
+	$lh: var(--text_line_height),
+	$unit: 1em,
+	$breakpoint: 4,
+	$color-bg: $white,
+	$min-height: false
+) {
+	$height: calc((#{$breakpoint} * #{$lh}) * #{$unit});
+
+	position: relative;
+	min-height: if($min-height, $height, auto);
+	max-height: $height;
+	overflow: hidden;
+	background-color: $color-bg;
+	line-height: $lh;
+
+	&::after {
+		content: '';
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		z-index: 1;
+		width: calc((#{$lh} * #{$unit}) + 3ch);
+		height: calc(((((#{$breakpoint} - 1) * #{$lh}) * #{$unit}) - 100%) * -1000);
+		max-height: calc(#{$lh} * #{$unit});
+		background-image: linear-gradient(to right, $crystal, $color-bg 50%);
+	}
+}
+
+@mixin truncate_text() {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

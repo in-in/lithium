@@ -1,0 +1,62 @@
+@use 'sass:map';
+@use 'sass:meta';
+@use 'sass:string';
+@use 'vars' as *;
+
+@function compose($classname) {
+	@return string.slice(#{$classname}, 2);
+}
+
+@function t2c($target, $context, $unit: vw) {
+	$result: null;
+
+	@if meta.type-of($context) == number {
+		$result: calc((#{$target} / #{$context}) * 100);
+	}
+
+	@else if map.has-key($sizes, $context) {
+		$result: calc((#{$target} / #{map.get($sizes, $context)}) * 100);
+	}
+
+	@else {
+		@error 'Unknown context argument <#{$context}>';
+	}
+
+	@if $unit == p {
+		@return (calc(#{$result} * 1%));
+	}
+
+	@else if $unit == vw {
+		@return (calc(#{$result} * 1vw));
+	}
+
+	@else {
+		@error 'Unknown unit <#{$unit}>';
+	}
+}
+
+@function em($px, $context: $base_font) {
+	@return calc((#{$px} / #{$context}) * 1em);
+}
+
+@function rem($px, $base: $base_font) {
+	@return calc((#{$px} / #{$base_font}) * 1rem);
+}
+
+@function locks(
+	$size_min,
+	$size_max,
+	$viewport_min: map.get($sizes, xs),
+	$viewport_max: map.get($sizes, xl)
+) {
+	$size_increase: ($size_max - $size_min);
+	$viewport_increase: ($viewport_max - $viewport_min);
+	$slope: ($size_increase) / ($viewport_increase);
+	$initial_size: ($size_min - $slope * $viewport_min) / $base_font;
+
+	@return calc(#{$slope * 100}vw + #{$initial_size}rem);
+}
+
+@function aspect-ratio($size, $ratio) {
+	@return calc(#{$size} / (#{$ratio}));
+}
