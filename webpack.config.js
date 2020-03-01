@@ -13,15 +13,15 @@ const PATHS = {
 	get 'fonts'() { return path.join(this.assets, 'fonts'); },
 };
 
-const pug = {
-	'test': /\.pug$/,
-	'use': ['pug-loader'],
-};
-
 const SRC_PAGES = fs
 	.readdirSync(PATHS.pages)
 	.filter((i) => i.endsWith('.pug'))
 	.map((p) => path.basename(p, '.pug'));
+
+const pug = {
+	'test': /\.pug$/,
+	'use': ['pug-loader'],
+};
 
 const images = {
 	'test': /\.(png|jpe?g|webp)$/i,
