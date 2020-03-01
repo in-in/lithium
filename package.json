@@ -1,10 +1,10 @@
 {
-	"name": "Webovio",
+	"name": "webovio",
 	"private": true,
 	"scripts": {
-		"build": "webpack --config webpack.config.prod.js",
-		"dev": "webpack --config webpack.config.dev.js",
-		"start": "webpack-dev-server --config webpack.config.dev.js"
+		"build": "webpack --config .config/webpack.prod.js",
+		"dev": "webpack --config .config/webpack.dev.js",
+		"start": "webpack-dev-server --config .config/webpack.dev.js"
 	},
 	"browserslist": [
 		"last 2 versions and > 0.5%",

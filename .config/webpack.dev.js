@@ -11,7 +11,14 @@ const style = {
 	'use': [
 		'style-loader',
 		'css-loader',
-		'postcss-loader',
+		{
+			'loader': 'postcss-loader',
+			'options': {
+				'config': {
+					'path': PATHS.config,
+				},
+			},
+		},
 		{
 			'loader': 'sass-loader',
 			'options': {

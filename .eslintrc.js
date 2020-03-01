@@ -9,5 +9,11 @@ module.exports = {
 		'max-len': ['error', 90, 2],
 		'no-tabs': 0,
 		'quote-props': ['error', 'always'],
+		'import/no-extraneous-dependencies': ['error', {
+			'devDependencies': [
+				'.**/webpack.*.js',
+			],
+			'optionalDependencies': false,
+		}],
 	},
 };

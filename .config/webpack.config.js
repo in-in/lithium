@@ -1,11 +1,13 @@
 const path = require('path');
 const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const st = require('./src/styles/style.json');
+const st = require('../src/styles/style.json');
 
 const PATHS = {
-	'src': path.resolve(__dirname, 'src'),
-	'dist': path.resolve(__dirname, 'dist'),
+	'root': process.cwd(),
+	get 'src'() { return path.resolve(this.root, 'src'); },
+	get 'dist'() { return path.resolve(this.root, 'dist'); },
+	get 'config'() { return path.resolve(this.root, '.config'); },
 	get 'pages'() { return path.resolve(this.src, 'pages'); },
 	get 'components'() { return path.resolve(this.src, 'components'); },
 	'assets': 'assets',
