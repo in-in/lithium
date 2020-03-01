@@ -1,8 +1,8 @@
+@use "config" as *;
 @forward 'reset';
 @forward 'theme';
-@use "config" as *;
-@use 'button/style' as *;
-@use 'header/style' as *;
+@forward 'header/style';
+@forward 'button/style';
 
 $color: coral;
 
