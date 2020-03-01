@@ -1,5 +1,6 @@
-- const title = 'Webovio';
+block head
+	- const title = 'Webovio';
 
-include ../meta/index
+	include ../meta/index
 
-title= pageTitle ? pageTitle : title
+	title= pageTitle ? `${title} | ${pageTitle}` : title
