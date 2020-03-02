@@ -1,7 +1,6 @@
 const path = require('path');
 const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const st = require('../src/styles/style.json');
 
 const PATHS = {
 	'root': process.cwd(),
@@ -22,7 +21,9 @@ const SRC_PAGES = fs
 
 const pug = {
 	'test': /\.pug$/,
-	'use': ['pug-loader'],
+	'use': {
+		'loader': 'pug-loader',
+	},
 };
 
 const images = {
@@ -64,9 +65,6 @@ const config = {
 			(name) => new HtmlWebpackPlugin({
 				'filename': `${name}.html`,
 				'template': path.join(PATHS.pages, `${name}.pug`),
-				'templateParameters': {
-					'st': st,
-				},
 			}),
 		),
 	],

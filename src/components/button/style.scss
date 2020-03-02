@@ -7,4 +7,20 @@ $font_size: rem(24);
 	background-color: lightseagreen;
 	font-size: $font_size;
 	text-transform: uppercase;
+
+	@include breakpoint(s) {
+		background-color: aqua;
+	}
+
+	@include breakpoint(m) {
+		background-color: blueviolet;
+	}
+
+	@include breakpoint(l) {
+		background-color: chocolate;
+	}
+
+	@include breakpoint(xl) {
+		background-color: darkorange;
+	}
 }

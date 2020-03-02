@@ -1,3 +1,7 @@
+include ../copy/index
+
 footer(class=st.footer)
 	block footer
-		p footer
+		p(class=st.footer__text) footer
+		div(class=st.footer__copy)
+			+copy()
