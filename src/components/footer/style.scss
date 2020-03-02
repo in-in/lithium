@@ -1,3 +1,4 @@
+@use "config" as *;
 @forward 'copy/style';
 
 .footer {
@@ -5,6 +6,22 @@
 	justify-content: center;
 	align-items: center;
 	background-color: cornflowerblue;
+
+	@include breakpoint(s) {
+		background-color: beige;
+	}
+
+	@include breakpoint(m) {
+		background-color: brown;
+	}
+
+	@include breakpoint(l) {
+		background-color: chartreuse;
+	}
+
+	@include breakpoint(xl) {
+		background-color: crimson;
+	}
 
 	&__text {
 		font-weight: 900;

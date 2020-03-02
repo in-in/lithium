@@ -15,5 +15,8 @@ module.exports = {
 			'generateScopedName': '[local]__[hash:base64:5]',
 			'getJSON': saveJSON,
 		},
+		'postcss-sort-media-queries': {
+			'sort': 'mobile-first',
+		},
 	},
 };
