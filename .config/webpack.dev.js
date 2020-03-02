@@ -10,18 +10,25 @@ const style = {
 	'test': /\.scss$/,
 	'use': [
 		'style-loader',
-		'css-loader',
+		{
+			'loader': 'css-loader',
+			'options': {
+				'sourceMap': true,
+			},
+		},
 		{
 			'loader': 'postcss-loader',
 			'options': {
 				'config': {
 					'path': PATHS.config,
 				},
+				'sourceMap': true,
 			},
 		},
 		{
 			'loader': 'sass-loader',
 			'options': {
+				'sourceMap': true,
 				'sassOptions': {
 					'includePaths': [PATHS.components],
 				},
