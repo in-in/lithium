@@ -18,5 +18,6 @@ module.exports = {
 		'postcss-sort-media-queries': {
 			'sort': 'mobile-first',
 		},
+		'postcss-csso': {},
 	},
 };
