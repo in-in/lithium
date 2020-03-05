@@ -59,4 +59,4 @@ const config = {
 		],
 	},
 };
-module.exports = merge(common, config);
+module.exports = merge.smart(common, config);

@@ -29,6 +29,31 @@ const style = {
 	],
 };
 
+const images = {
+	'test': /\.(png|jpe?g|webp)$/i,
+	'use': [
+		{
+			'loader': 'image-webpack-loader',
+			'options': {
+				'mozjpeg': {
+					'progressive': true,
+					'quality': 85,
+				},
+				'optipng': {
+					'enabled': false,
+				},
+				'pngquant': {
+					'quality': [0.8, 0.85],
+					'speed': 4,
+				},
+				'webp': {
+					'quality': 85,
+				},
+			},
+		},
+	],
+};
+
 const config = {
 	'mode': 'production',
 	'output': {
@@ -44,7 +69,8 @@ const config = {
 	'module': {
 		'rules': [
 			style,
+			images,
 		],
 	},
 };
-module.exports = merge(common, config);
+module.exports = merge.smart(common, config);

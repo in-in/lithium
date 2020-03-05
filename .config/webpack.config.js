@@ -28,13 +28,15 @@ const pug = {
 
 const images = {
 	'test': /\.(png|jpe?g|webp)$/i,
-	'use': {
-		'loader': 'file-loader',
-		'options': {
-			'name': '[name].[contenthash].[ext]',
-			'outputPath': PATHS.images,
+	'use': [
+		{
+			'loader': 'file-loader',
+			'options': {
+				'name': '[name].[contenthash].[ext]',
+				'outputPath': PATHS.images,
+			},
 		},
-	},
+	],
 };
 
 const fonts = {
