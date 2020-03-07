@@ -43,6 +43,7 @@ const config = {
 		'filename': '[name].js',
 		'path': PATHS.dist,
 	},
+	'devtool': 'eval-cheap-module-source-map',
 	'devServer': {
 		'clientLogLevel': 'silent',
 		'https': {
