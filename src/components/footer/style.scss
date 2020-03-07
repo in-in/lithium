@@ -1,26 +1,27 @@
-@use "config" as *;
+@use 'config' as *;
+
 @forward 'copy/style';
 
 .footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: cornflowerblue;
+	background-color: #6495ed;
 
 	@include breakpoint(s) {
-		background-color: beige;
+		background-color: #f5f5dc;
 	}
 
 	@include breakpoint(m) {
-		background-color: brown;
+		background-color: #a52a2a;
 	}
 
 	@include breakpoint(l) {
-		background-color: chartreuse;
+		background-color: #7fff00;
 	}
 
 	@include breakpoint(xl) {
-		background-color: crimson;
+		background-color: #ed143d;
 	}
 
 	&__text {

@@ -16,6 +16,7 @@
 	}
 }
 
+/* stylelint-disable function-url-quotes */
 @mixin font_face($name, $filename, $weight: 400, $style: normal, $ext: woff2) {
 	@font-face {
 		font-family: string.quote($name);
@@ -27,6 +28,7 @@
 			format(string.quote($ext));
 	}
 }
+/* stylelint-enable */
 
 @mixin hover_transition() {
 	transition-property: background-color, color, fill;

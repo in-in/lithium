@@ -1,5 +1,6 @@
 const fs = require('fs');
 const merge = require('webpack-merge');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 const common = require('./webpack.config');
 
 const PATHS = common.externals.paths;
@@ -59,5 +60,10 @@ const config = {
 			style,
 		],
 	},
+	'plugins': [
+		new StylelintPlugin({
+			'fix': true,
+		}),
+	],
 };
 module.exports = merge.smart(common, config);

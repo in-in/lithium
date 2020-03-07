@@ -1,4 +1,4 @@
-@import "normalize/opinionated.css";
+@import 'normalize/opinionated.css';
 
 * {
 	margin: 0;
@@ -10,12 +10,14 @@
 ::after {
 	box-sizing: border-box;
 
+	/* stylelint-disable time-min-milliseconds */
 	@media (prefers-reduced-motion: reduce) {
 		scroll-behavior: auto !important;
 		transition-duration: 0.001s !important;
 		animation-duration: 0.001s !important;
 		animation-iteration-count: 1 !important;
 	}
+	/* stylelint-enable */
 }
 
 H1,
@@ -40,7 +42,7 @@ A {
 	text-decoration: none;
 }
 
-HTML SVG {
+HTML SVG { /* stylelint-disable-line selector-max-type */
 	display: block;
 	width: 100%;
 	height: auto;

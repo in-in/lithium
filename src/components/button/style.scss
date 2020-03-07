@@ -1,26 +1,26 @@
-@use "config" as *;
+@use 'config' as *;
 
 $font_size: rem(24);
 
 .btn {
-	color: crimson;
-	background-color: lightseagreen;
-	font-size: $font_size;
+	background-color: #20b2aa;
+	color: #dc143c;
 	text-transform: uppercase;
+	font-size: $font_size;
 
 	@include breakpoint(s) {
-		background-color: aqua;
+		background-color: #0ff;
 	}
 
 	@include breakpoint(m) {
-		background-color: blueviolet;
+		background-color: #8a2be2;
 	}
 
 	@include breakpoint(l) {
-		background-color: chocolate;
+		background-color: #d2691e;
 	}
 
 	@include breakpoint(xl) {
-		background-color: darkorange;
+		background-color: #d2691e;
 	}
 }

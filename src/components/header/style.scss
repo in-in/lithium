@@ -1,8 +1,8 @@
-@use "config" as *;
+@use 'config' as *;
 
 .header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: lightsalmon;
+	background-color: #ffa07a;
 }
