@@ -1,18 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-const PATHS = {
-	'root': process.cwd(),
-	get 'src'() { return path.resolve(this.root, 'src'); },
-	get 'dist'() { return path.resolve(this.root, 'dist'); },
-	get 'config'() { return path.resolve(this.root, '.config'); },
-	get 'pages'() { return path.resolve(this.src, 'pages'); },
-	get 'components'() { return path.resolve(this.src, 'components'); },
-	'assets': 'assets',
-	get 'images'() { return path.join(this.assets, 'images'); },
-	get 'fonts'() { return path.join(this.assets, 'fonts'); },
-};
+const { PATHS } = require('./paths');
 
 const SRC_PAGES = fs
 	.readdirSync(PATHS.pages)
