@@ -5,4 +5,8 @@
 	justify-content: center;
 	align-items: center;
 	background-color: #ffa07a;
+
+	&__logo {
+		text-transform: uppercase;
+	}
 }
