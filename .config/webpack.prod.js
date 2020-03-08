@@ -73,4 +73,5 @@ const config = {
 		],
 	},
 };
+
 module.exports = merge.smart(common, config);

@@ -53,7 +53,7 @@ const config = {
 		},
 		'overlay': true,
 		'port': 7777,
-		'stats': 'errors-only',
+		'stats': 'minimal',
 	},
 	'module': {
 		'rules': [
@@ -66,4 +66,5 @@ const config = {
 		}),
 	],
 };
+
 module.exports = merge.smart(common, config);
