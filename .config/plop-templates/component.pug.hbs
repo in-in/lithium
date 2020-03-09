@@ -1,2 +1,4 @@
 mixin {{ name }}(str='{{ name }}')
-	div(class=s.{{ name }})&attributes(attributes)= str + ' component'
+	div(class=s.{{ name }})&attributes(attributes)
+		p= str + ' component'
+		block
