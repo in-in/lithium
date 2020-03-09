@@ -1,7 +1,9 @@
-include ../button/index.pug
+include ../section/index.pug
 
 main(class=s.main)
-	h1 Hero
-	img(src=require('../assets/images/rocket-64.png').default alt='rocket')
-	img(src=require('../assets/images/blue.webp').default alt='blue')
-	img(src=require('../assets/images/shuttle.jpg').default alt='shuttle')
+	+section('Hero')(class=s.section__top)
+		p foobar
+
+	//- img(src=require('../assets/images/rocket-64.png').default alt='rocket')
+	//- img(src=require('../assets/images/blue.webp').default alt='blue')
+	//- img(src=require('../assets/images/shuttle.jpg').default alt='shuttle')
