@@ -2,8 +2,11 @@
 
 .main {
 	display: flex;
+	grid-row: 1 / span 4;
+	grid-column: 1;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
 	background-color: #5f9ea0;
 }

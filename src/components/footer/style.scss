@@ -4,9 +4,12 @@
 
 .footer {
 	display: flex;
+	grid-row: 5 / span 3;
+	grid-column: 1;
 	justify-content: center;
 	align-items: center;
-	background-color: #6495ed;
+	height: 800px;
+	background-color: rgb(237, 20, 61, 0.7);
 
 	@include breakpoint(s) {
 		background-color: #f5f5dc;
@@ -21,7 +24,7 @@
 	}
 
 	@include breakpoint(xl) {
-		background-color: #ed143d;
+		background-color: rgb(237, 20, 61, 0.7);
 	}
 
 	&__text {

@@ -1,4 +1,11 @@
 extends ../components/layout/index.pug
+include ../components/aside/index.pug
 
 prepend head
 	- const pageTitle = 'Home';
+
+block body
+	include ../components/header/index.pug
+	include ../components/main/index.pug
+	+aside('Let’s make something amazing together.')
+	include ../components/footer/index.pug
