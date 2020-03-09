@@ -5,7 +5,7 @@ const toSnakeCase = (str) => (
 		? str.replace('-', '_')
 		: str);
 
-module.exports = (plop) => {
+const config = (plop) => {
 	plop.setGenerator('component', {
 		'description': 'Create a component',
 		'prompts': [
@@ -13,7 +13,7 @@ module.exports = (plop) => {
 				'type': 'input',
 				'name': 'name',
 				'message': 'What is your component name?',
-				'filter': (input) => (toSnakeCase(input).toLowerCase()),
+				'filter': (input) => toSnakeCase(input).toLowerCase(),
 			},
 		],
 		'actions': [
@@ -27,6 +27,14 @@ module.exports = (plop) => {
 				'path': `${PATHS.components}/{{ name }}/style.scss`,
 				'templateFile': 'plop-templates/component.scss.hbs',
 			},
+			{
+				'type': 'append',
+				'path': `${PATHS.styles}/style.scss`,
+				'separator': '',
+				'template': "@forward '{{ name }}/style';\n",
+			},
 		],
 	});
 };
+
+module.exports = config;
