@@ -1,5 +1,5 @@
 {
-	"name": "webovio",
+	"name": "lithium",
 	"private": true,
 	"scripts": {
 		"build": "webpack --config .config/webpack.prod.js",
