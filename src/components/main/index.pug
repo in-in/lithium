@@ -1,8 +1,10 @@
 include ../section/index.pug
 
-main(class=s.main)
-	+section('Hero')(class=s.section__top)
-		p foobar
+mixin main()
+	main(class=s.main)&attributes(attributes)
+		+section('Hero')(class=s.section__top)
+		block
+		p main
 
 	//- img(src=require('../assets/images/rocket-64.png').default alt='rocket')
 	//- img(src=require('../assets/images/blue.webp').default alt='blue')

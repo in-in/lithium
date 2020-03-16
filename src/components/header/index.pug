@@ -1,3 +1,4 @@
-header(class=s.header)
-	block header
+mixin header()
+	header(class=s.header)&attributes(attributes)
 		h2(class=s.header__logo) Logo
+		block

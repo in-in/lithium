@@ -1,7 +1,8 @@
 include ../copy/index.pug
 
-footer(class=s.footer)
-	block footer
+mixin footer()
+	footer(class=s.footer)&attributes(attributes)
+		block
 		p(class=s.footer__text) footer
 		div(class=s.footer__copy)
 			+copy()
