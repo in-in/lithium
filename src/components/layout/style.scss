@@ -1,8 +1,6 @@
 @use 'config' as *;
 
 .layout {
-	--full_width: 1 / -1;
-
 	display: grid;
 	grid-template-rows: repeat(44, 1fr);
 	grid-template-columns: repeat(8, 1fr);
@@ -16,7 +14,7 @@
 
 	&__main {
 		grid-row: 1 / -8;
-		grid-column: var(--full_width);
+		grid-column: #{$width_full};
 	}
 
 	&__aside {
@@ -28,6 +26,6 @@
 
 	&__footer {
 		grid-row: span 7 / -1;
-		grid-column: var(--full_width);
+		grid-column: #{$width_full};
 	}
 }

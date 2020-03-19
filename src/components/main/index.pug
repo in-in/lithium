@@ -1,8 +1,13 @@
 include ../section/index.pug
+include ../aside/index.pug
 
 mixin main()
 	main(class=s.main)&attributes(attributes)
-		+section('Hero')(class=s.section__top)
+		+section('Hero')(class=s['main__section-hero'])
+		+section('About')(class=s['main__section-about'])
+		+aside('Lorem ipsum, dolor sit amet consectetur')(class=s.main__aside)
+		+section('Projects')(class=s['main__section-projects'])
+		+section('Features')(class=s['main__section-features'])
 		block
 		p main
 
