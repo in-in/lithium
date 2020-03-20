@@ -3,7 +3,8 @@
 .main {
 	display: grid;
 	grid-template-rows: repeat(37, 1fr);
-	grid-template-columns: repeat(8, 1fr);
+	grid-template-columns: inherit;
+	gap: inherit;
 	background-color: #5f9ea0;
 
 	&__section {
