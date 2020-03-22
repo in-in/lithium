@@ -1,7 +1,10 @@
 const path = require('path');
 const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 const { PATHS } = require('./paths');
+
+global.icons = path.resolve(PATHS.src, PATHS.icons);
 
 const SRC_PAGES = fs
 	.readdirSync(PATHS.pages)
@@ -12,6 +15,9 @@ const pug = {
 	'test': /\.pug$/,
 	'use': {
 		'loader': 'pug-loader',
+		'options': {
+			'globals': ['icons'],
+		},
 	},
 };
 
@@ -58,6 +64,9 @@ const config = {
 				'template': path.join(PATHS.pages, `${name}.pug`),
 			}),
 		),
+		new HtmlWebpackInlineSVGPlugin({
+			'runPreEmit': true,
+		}),
 	],
 };
 

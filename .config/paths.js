@@ -10,6 +10,7 @@ const PATHS = {
 	get 'components'() { return path.resolve(this.src, 'components'); },
 	get 'styles'() { return path.resolve(this.src, 'styles'); },
 	get 'images'() { return path.join(this.assets, 'images'); },
+	get 'icons'() { return path.join(this.assets, 'icons'); },
 	get 'fonts'() { return path.join(this.assets, 'fonts'); },
 };
 
