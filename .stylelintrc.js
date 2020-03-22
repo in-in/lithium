@@ -197,7 +197,7 @@ module.exports = {
 		'selector-max-empty-lines': 0,
 		'selector-max-id': 2,
 		'selector-max-pseudo-class': 2,
-		'selector-max-specificity': '0,3,0',
+		'selector-max-specificity': '1,3,0',
 		'selector-max-type': 1,
 		'selector-max-universal': 1,
 		'selector-nested-pattern': null,
