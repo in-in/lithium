@@ -1,4 +1,6 @@
+include ../logo/index.pug
+
 mixin header()
 	header(class=s.header)&attributes(attributes)
-		h2(class=s.header__logo) Logo
+		+logo()
 		block
