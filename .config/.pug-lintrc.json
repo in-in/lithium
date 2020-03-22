@@ -33,7 +33,7 @@
 	"validateAttributeQuoteMarks": "'",
 	"validateAttributeSeparator": {
 		"separator": " ",
-		"multiLineSeparator": "\n"
+		"multiLineSeparator": "\n\t"
 	},
 	"validateDivTags": true,
 	"validateExtensions": true,
