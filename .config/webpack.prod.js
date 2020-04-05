@@ -1,12 +1,16 @@
+const path = require('path');
 const merge = require('webpack-merge');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
+const HtmlWebpackExcludeAssetsPlugin = require('html-webpack-exclude-assets-plugin');
+const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 const common = require('./webpack.config');
+const { PATHS, PAGES } = require('./paths');
 
-const PATHS = common.externals.paths;
-
-const style = {
-	'test': /\.(sa|sc|c)ss$/,
+const styles = {
+	'test': /\.scss$/,
 	'use': [
 		MiniCssExtractPlugin.loader,
 		'css-loader',
@@ -60,7 +64,38 @@ const config = {
 		'filename': '[name].[contenthash].js',
 		'path': PATHS.dist,
 	},
+	'optimization': {
+		'splitChunks': {
+			'cacheGroups': {
+				'inline': {
+					'name': (module, chunks, cacheGroupKey) => cacheGroupKey,
+					'test': /inline.scss$/,
+					'chunks': 'all',
+					'enforce': true,
+				},
+				'styles': {
+					'name': (module, chunks, cacheGroupKey) => cacheGroupKey,
+					'test': /style.scss$/,
+					'chunks': 'all',
+					'enforce': true,
+				},
+			},
+		},
+	},
 	'plugins': [
+		...PAGES.map(
+			(name) => new HtmlWebpackPlugin({
+				'filename': `${name}.html`,
+				'template': path.join(PATHS.pages, `${name}.pug`),
+				'excludeAssets': [/inline.*.js$/, /styles.*.js$/],
+				'inlineSource': 'inline.*.css',
+			}),
+		),
+		new HtmlWebpackInlineSourcePlugin(),
+		new HtmlWebpackExcludeAssetsPlugin(),
+		new HtmlWebpackInlineSVGPlugin({
+			'runPreEmit': true,
+		}),
 		new CleanWebpackPlugin(),
 		new MiniCssExtractPlugin({
 			'filename': '[name].[contenthash].css',
@@ -68,7 +103,7 @@ const config = {
 	],
 	'module': {
 		'rules': [
-			style,
+			styles,
 			images,
 		],
 	},

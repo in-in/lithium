@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 
 const PATHS = {
 	'root': process.cwd(),
@@ -14,4 +15,9 @@ const PATHS = {
 	get 'fonts'() { return path.join(this.assets, 'fonts'); },
 };
 
-module.exports = { PATHS };
+const PAGES = fs
+	.readdirSync(PATHS.pages)
+	.filter((i) => i.endsWith('.pug'))
+	.map((p) => path.basename(p, '.pug'));
+
+module.exports = { PATHS, PAGES };

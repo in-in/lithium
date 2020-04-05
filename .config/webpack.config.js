@@ -1,15 +1,9 @@
 const path = require('path');
-const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
-const { PATHS } = require('./paths');
+const { PATHS, PAGES } = require('./paths');
 
 global.icons = path.resolve(PATHS.src, PATHS.icons);
-
-const SRC_PAGES = fs
-	.readdirSync(PATHS.pages)
-	.filter((i) => i.endsWith('.pug'))
-	.map((p) => path.basename(p, '.pug'));
 
 const pug = {
 	'test': /\.pug$/,
@@ -46,10 +40,13 @@ const fonts = {
 };
 
 const config = {
-	'externals': {
-		'paths': PATHS,
+	'entry': {
+		'main': path.join(PATHS.src, 'index.js'),
+		'styles': [
+			path.resolve(PATHS.styles, 'inline.scss'),
+			path.resolve(PATHS.styles, 'style.scss'),
+		],
 	},
-	'entry': path.join(PATHS.src, 'index.js'),
 	'module': {
 		'rules': [
 			pug,
@@ -58,7 +55,7 @@ const config = {
 		],
 	},
 	'plugins': [
-		...SRC_PAGES.map(
+		...PAGES.map(
 			(name) => new HtmlWebpackPlugin({
 				'filename': `${name}.html`,
 				'template': path.join(PATHS.pages, `${name}.pug`),

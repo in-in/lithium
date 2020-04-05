@@ -2,8 +2,8 @@ const fs = require('fs');
 const merge = require('webpack-merge');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const common = require('./webpack.config');
+const { PATHS } = require('./paths');
 
-const PATHS = common.externals.paths;
 const SSL_CERT = process.env.CERT_FILE_LOCALHOST;
 const SSL_KEY = process.env.KEY_FILE_LOCALHOST;
 
