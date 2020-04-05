@@ -2,6 +2,9 @@ const path = require('path');
 const fs = require('fs');
 
 const saveJSON = (fileName, json) => {
+	if (fileName.includes('inline.scss')) {
+		return;
+	}
 	const { dir, name } = path.parse(fileName);
 	const jsonFileName = path.resolve(dir, `${name}.json`);
 	fs.writeFileSync(jsonFileName, JSON.stringify(json));
