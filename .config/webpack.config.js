@@ -44,7 +44,7 @@ const config = {
 		'main': path.join(PATHS.src, 'index.js'),
 		'styles': [
 			path.resolve(PATHS.styles, 'inline.scss'),
-			path.resolve(PATHS.styles, 'style.scss'),
+			path.resolve(PATHS.styles, 'styles.scss'),
 		],
 	},
 	'module': {
