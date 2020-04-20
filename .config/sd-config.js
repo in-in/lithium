@@ -9,10 +9,11 @@ module.exports = {
 	],
 	'platforms': {
 		'scss': {
-			'transformGroup': 'web',
 			'transforms': [
-				'name/cti/snake',
+				'attribute/cti',
 				'color/css',
+				'content/quote',
+				'name/cti/snake',
 				'size/rem',
 			],
 			'buildPath': buildPath,
@@ -29,12 +30,10 @@ module.exports = {
 			}],
 		},
 		'scss-map': {
-			'transformGroup': 'web',
 			'transforms': [
 				'attribute/cti',
-				'name/cti/snake',
-				// 'name/human',
 				'color/css',
+				'name/cti/snake',
 				'size/px',
 			],
 			'buildPath': buildPath,
