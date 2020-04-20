@@ -10,7 +10,7 @@
 	&__section {
 		$section: compose(&);
 
-		grid-column: #{$width_full};
+		grid-column: #{$grid_full};
 
 		&-hero {
 			composes: $section;

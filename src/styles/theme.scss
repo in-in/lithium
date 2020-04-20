@@ -1,15 +1,5 @@
 @use 'config' as *;
 
-:root {
-	--border_radius: #{rem($border_radius)};
-	--transition_duration: 0.4s;
-	--transition_easeing: ease-in-out;
-
-	@include breakpoint(xl) {
-		--border_radius: #{t2c($border_radius, xl)};
-	}
-}
-
 *:focus {
 	outline: none !important;
 	box-shadow:
@@ -18,7 +8,7 @@
 }
 
 BODY {
-	font-family: $font_secondary;
+	font-family: $asset_font_secondary_woff_2;
 }
 
 ::selection {

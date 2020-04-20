@@ -2,11 +2,12 @@
 @use 'sass:string';
 @use 'sass:color';
 @use 'functions' as *;
-@use 'vars' as *;
+@use 'tokens' as *;
+@use 'breakpoint' as *;
 
 @mixin breakpoint($size) {
-	@if map.get($sizes, $size) {
-		@media (min-width: map.get($sizes, $size) + px) {
+	@if map.get($breakpoints, $size) {
+		@media (min-width: map.get($breakpoints, $size) + px) {
 			@content;
 		}
 	}

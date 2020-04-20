@@ -4,7 +4,7 @@
 	display: grid;
 	grid-template-rows: repeat(44, 1fr);
 	grid-template-columns: repeat(8, 1fr);
-	gap: t2c(16, xl);
+	gap: t2c(16, breakpoint_xl);
 	background-color: #f5f5f5;
 
 	&__header {
@@ -14,7 +14,7 @@
 
 	&__main {
 		grid-row: 1 / -8;
-		grid-column: #{$width_full};
+		grid-column: #{$grid_full};
 	}
 
 	&__aside {
@@ -26,6 +26,6 @@
 
 	&__footer {
 		grid-row: span 7 / -1;
-		grid-column: #{$width_full};
+		grid-column: #{$grid_full};
 	}
 }

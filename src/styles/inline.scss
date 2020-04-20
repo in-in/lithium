@@ -1,7 +1,7 @@
-@use 'vars' as *;
+@use 'tokens' as *;
 
 SVG {
 	width: 3em;
 	height: 1em;
-	fill: $white;
+	fill: $color_base_white;
 }

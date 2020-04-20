@@ -1,0 +1,18 @@
+{
+	"color": {
+		"base": {
+			"red": {
+				"value": "#FF0000"
+			},
+			"black": {
+				"value": "#222222"
+			},
+			"white": {
+				"value": "#ffffff"
+			},
+			"crystal": {
+				"value": "rgba(255, 255, 255, 0)"
+			}
+		}
+	}
+}

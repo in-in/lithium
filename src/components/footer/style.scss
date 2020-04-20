@@ -7,19 +7,19 @@
 	height: 800px;
 	background-color: rgb(237, 20, 61, 0.7);
 
-	@include breakpoint(s) {
+	@include breakpoint(breakpoint_s) {
 		background-color: #f5f5dc;
 	}
 
-	@include breakpoint(m) {
+	@include breakpoint(breakpoint_m) {
 		background-color: #a52a2a;
 	}
 
-	@include breakpoint(l) {
+	@include breakpoint(breakpoint_l) {
 		background-color: #7fff00;
 	}
 
-	@include breakpoint(xl) {
+	@include breakpoint(breakpoint_xl) {
 		background-color: rgb(237, 20, 61, 0.7);
 	}
 

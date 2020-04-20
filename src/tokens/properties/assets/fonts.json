@@ -1,0 +1,16 @@
+{
+	"asset": {
+		"font": {
+			"main": {
+				"woff2": {
+					"value": "Inconsolata"
+				}
+			},
+			"secondary": {
+				"woff2": {
+					"value": "Raleway"
+				}
+			}
+		}
+	}
+}

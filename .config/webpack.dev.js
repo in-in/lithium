@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const merge = require('webpack-merge');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const common = require('./webpack.config');
@@ -31,7 +32,7 @@ const style = {
 			'options': {
 				'sourceMap': true,
 				'sassOptions': {
-					'includePaths': [PATHS.components],
+					'includePaths': [PATHS.components, path.join(PATHS.tokens, 'build')],
 				},
 			},
 		},

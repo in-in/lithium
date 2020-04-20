@@ -26,7 +26,7 @@ const styles = {
 			'loader': 'sass-loader',
 			'options': {
 				'sassOptions': {
-					'includePaths': [PATHS.components],
+					'includePaths': [PATHS.components, path.join(PATHS.tokens, 'build')],
 				},
 			},
 		},
