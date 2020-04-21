@@ -7,37 +7,37 @@
 	gap: inherit;
 	background-color: #5f9ea0;
 
-	&__section {
+	&_section {
 		$section: compose(&);
 
 		grid-column: #{$grid_full};
 
-		&-hero {
+		&Hero {
 			composes: $section;
 			grid-row: 1 / span 6;
 			background-color: #4b0082;
 		}
 
-		&-about {
+		&About {
 			composes: $section;
 			grid-row: 7 / span 5;
 			background-color: #001580;
 		}
 
-		&-projects {
+		&Projects {
 			composes: $section;
 			grid-row: 13 / span 17;
 			background-color: #480080;
 		}
 
-		&-features {
+		&Features {
 			composes: $section;
 			grid-row: 31 / span 5;
 			background-color: #800057;
 		}
 	}
 
-	&__aside {
+	&_aside {
 		grid-row: 6 / span 2;
 		grid-column: 2 / -1;
 	}

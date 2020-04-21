@@ -1,12 +1,9 @@
 @use 'config' as *;
 
-$font_size: rem(24);
-
-.btn {
+.button {
 	background-color: #20b2aa;
 	color: #dc143c;
 	text-transform: uppercase;
-	font-size: $font_size;
 
 	@include breakpoint(breakpoint_s) {
 		background-color: #0ff;

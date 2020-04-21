@@ -7,24 +7,24 @@
 	gap: t2c(16, breakpoint_xl);
 	background-color: #f5f5f5;
 
-	&__header {
+	&_header {
 		grid-row: 1 / span 1;
 		grid-column: 2 / -2;
 	}
 
-	&__main {
+	&_main {
 		grid-row: 1 / -8;
 		grid-column: #{$grid_full};
 	}
 
-	&__aside {
+	&_aside {
 		z-index: 1;
 		grid-row: span 3 / -6;
 		grid-column: 1 / -2;
 		border: 3px solid #daa520;
 	}
 
-	&__footer {
+	&_footer {
 		grid-row: span 7 / -1;
 		grid-column: #{$grid_full};
 	}

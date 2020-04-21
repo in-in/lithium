@@ -3,11 +3,11 @@ include ../aside/index.pug
 
 mixin main()
 	main(class=s.main)&attributes(attributes)
-		+section('Hero')(class=s['main__section-hero'])
-		+section('About')(class=s['main__section-about'])
-		+aside('Lorem ipsum, dolor sit amet consectetur')(class=s.main__aside)
-		+section('Projects')(class=s['main__section-projects'])
-		+section('Features')(class=s['main__section-features'])
+		+section('Hero')(class=s.main_sectionHero)
+		+section('About')(class=s.main_sectionAbout)
+		+aside('Lorem ipsum, dolor sit amet consectetur')(class=s.main_aside)
+		+section('Projects')(class=smain_sectionProjects)
+		+section('Features')(class=s.main_sectionFeatures)
 		block
 
 	//- img(src=require('../assets/images/rocket-64.png').default alt='rocket')
