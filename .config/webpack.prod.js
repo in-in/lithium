@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
 const HtmlWebpackExcludeAssetsPlugin = require('html-webpack-exclude-assets-plugin');
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
+const CssoWebpackPlugin = require('csso-webpack-plugin').default;
 const common = require('./webpack.config');
 const { PATHS, PAGES } = require('./paths');
 
@@ -100,6 +101,7 @@ const config = {
 		new MiniCssExtractPlugin({
 			'filename': '[name].[contenthash].css',
 		}),
+		new CssoWebpackPlugin(),
 	],
 	'module': {
 		'rules': [

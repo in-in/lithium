@@ -10,7 +10,7 @@ const saveJSON = (fileName, json) => {
 	fs.writeFileSync(jsonFileName, JSON.stringify(json));
 };
 
-module.exports = ({ webpack }) => ({
+module.exports = () => ({
 	'plugins': {
 		'autoprefixer': {},
 		'postcss-normalize': {},
@@ -21,6 +21,5 @@ module.exports = ({ webpack }) => ({
 		'postcss-sort-media-queries': {
 			'sort': 'mobile-first',
 		},
-		'postcss-csso': webpack.mode === 'production',
 	},
 });
