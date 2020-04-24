@@ -40,16 +40,9 @@
 	@return calc((#{$px} / #{$context}) * 1em);
 }
 
-// @function em($px, $context: $base_font) {
-// 	@return calc((#{$px} / #{$context}) * 1em);
-// }
-
 @function rem($px, $base: $size_font_base) {
 	@return calc((#{$px} / #{$base}) * 1rem);
 }
-// @function rem($px, $base: $base_font) {
-// 	@return calc((#{$px} / #{$base_font}) * 1rem);
-// }
 
 @function locks(
 	$size_min,
