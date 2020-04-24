@@ -4,6 +4,11 @@
 			"base": {
 				"value": "16"
 			}
+		},
+		"line-height": {
+			"base": {
+				"value": "1.5"
+			}
 		}
 	}
 }

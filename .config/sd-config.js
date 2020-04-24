@@ -14,7 +14,6 @@ module.exports = {
 				'color/css',
 				'content/quote',
 				'name/cti/snake',
-				'size/rem',
 			],
 			'buildPath': buildPath,
 			'files': [{
