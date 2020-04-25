@@ -1,6 +1,9 @@
 {
 	"asset": {
 		"font": {
+			"path": {
+				"value": "../assets/fonts/"
+			},
 			"main": {
 				"woff2": {
 					"value": "Inconsolata"
