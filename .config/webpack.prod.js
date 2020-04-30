@@ -7,6 +7,7 @@ const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin
 const HtmlWebpackExcludeAssetsPlugin = require('html-webpack-exclude-assets-plugin');
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 const CssoWebpackPlugin = require('csso-webpack-plugin').default;
+const MediaQueryPlugin = require('media-query-plugin');
 const common = require('./webpack.config');
 const { PATHS, PAGES } = require('./paths');
 
@@ -15,6 +16,7 @@ const styles = {
 	'use': [
 		MiniCssExtractPlugin.loader,
 		'css-loader',
+		MediaQueryPlugin.loader,
 		{
 			'loader': 'postcss-loader',
 			'options': {
@@ -90,6 +92,7 @@ const config = {
 				'template': path.join(PATHS.pages, `${name}.pug`),
 				'excludeAssets': [/inline.*.js$/, /styles.*.js$/],
 				'inlineSource': 'inline.*.css',
+				// 'inject': false,
 			}),
 		),
 		new HtmlWebpackInlineSourcePlugin(),
@@ -102,6 +105,15 @@ const config = {
 			'filename': '[name].[contenthash].css',
 		}),
 		new CssoWebpackPlugin(),
+		new MediaQueryPlugin({
+			'include': true,
+			'queries': {
+				'(min-width: 640px)': 's',
+				'(min-width: 960px)': 'm',
+				'(min-width: 1280px)': 'l',
+				'(min-width: 1440px)': 'xl',
+			},
+		}),
 	],
 	'module': {
 		'rules': [

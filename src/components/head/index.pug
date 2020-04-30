@@ -3,4 +3,10 @@ block head
 
 	include ../meta/index.pug
 
+	//- each css in htmlWebpackPlugin.files.css
+	//- 	link(rel="stylesheet" href= css)
+
+	each css in sortMq(htmlWebpackPlugin.files.extracted.css)
+		link(rel='stylesheet' href= css.file media= css.query)
+
 	title= pageTitle ? `${title} | ${pageTitle}` : title

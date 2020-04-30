@@ -4,13 +4,21 @@ const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 const { PATHS, PAGES } = require('./paths');
 
 global.icons = path.resolve(PATHS.src, PATHS.icons);
+global.sortMq = function sortByDigits(array) {
+	const re = /\D/g;
+	array
+		.sort((a, b) => (
+			parseInt(a.query.replace(re, ''), 10) - parseInt(b.query.replace(re, ''), 10)
+		));
+	return (array);
+};
 
 const pug = {
 	'test': /\.pug$/,
 	'use': {
 		'loader': 'pug-loader',
 		'options': {
-			'globals': ['icons'],
+			'globals': ['icons', 'sortMq'],
 		},
 	},
 };
