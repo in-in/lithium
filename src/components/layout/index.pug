@@ -7,3 +7,7 @@ html(lang='en' dir='ltr')
 		include ../head/index.pug
 	body(class=s.layout)
 		block body
+
+		each js in htmlWebpackPlugin.files.js
+			if js.includes('main')
+				script(src= js)
