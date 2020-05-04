@@ -3,8 +3,6 @@ const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
-const HtmlWebpackExcludeAssetsPlugin = require('html-webpack-exclude-assets-plugin');
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 const CssoWebpackPlugin = require('csso-webpack-plugin').default;
 const MediaQueryPlugin = require('media-query-plugin');
@@ -90,13 +88,9 @@ const config = {
 			(name) => new HtmlWebpackPlugin({
 				'filename': `${name}.html`,
 				'template': path.join(PATHS.pages, `${name}.pug`),
-				'excludeAssets': [/inline.*.js$/, /styles.*.js$/],
-				'inlineSource': 'inline.*.css',
-				// 'inject': false,
+				'inject': false,
 			}),
 		),
-		new HtmlWebpackInlineSourcePlugin(),
-		new HtmlWebpackExcludeAssetsPlugin(),
 		new HtmlWebpackInlineSVGPlugin({
 			'runPreEmit': true,
 		}),
