@@ -9,7 +9,8 @@ block head
 		else
 			link(rel='stylesheet' href= css)
 
-	each css in sortMq(htmlWebpackPlugin.files.extracted.css)
-		link(rel='stylesheet' href= css.file media= css.query)
+	if htmlWebpackPlugin.files.extracted
+		each css in sortMq(htmlWebpackPlugin.files.extracted.css)
+			link(rel='stylesheet' href= css.file media= css.query)
 
 	title= pageTitle ? `${title} | ${pageTitle}` : title
