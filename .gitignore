@@ -36,6 +36,5 @@ tmp
 
 # generated files
 .next/
-build/
 dist/
 out/
