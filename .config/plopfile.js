@@ -29,7 +29,7 @@ const config = (plop) => {
 			},
 			{
 				'type': 'append',
-				'path': `${PATHS.styles}/style.scss`,
+				'path': `${PATHS.styles}/styles.scss`,
 				'separator': '',
 				'template': "@forward '{{ name }}/style';\n",
 			},
