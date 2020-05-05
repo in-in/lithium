@@ -1,5 +1,6 @@
 include ../section/index.pug
 include ../aside/index.pug
+include ../img/index.pug
 
 mixin main()
 	main(class=s.main)&attributes(attributes)
@@ -9,7 +10,6 @@ mixin main()
 		+section('Projects')(class=smain_sectionProjects)
 		+section('Features')(class=s.main_sectionFeatures)
 		block
-
-	//- img(src=require('../assets/images/rocket-64.png').default alt='rocket')
-	//- img(src=require('../assets/images/blue.webp').default alt='blue')
-	//- img(src=require('../assets/images/shuttle.jpg').default alt='shuttle')
+		+img('rocket-64.png', 'rocket' )
+		+img('blue.webp', 'blue')
+		+img('shuttle.jpg', 'shuttle')

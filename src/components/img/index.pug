@@ -1,0 +1,6 @@
+mixin img(src, alt='')
+	img(
+		class=s.img
+		src= require(`../assets/images/${src}`).default
+		alt= alt
+		)&attributes(attributes)
