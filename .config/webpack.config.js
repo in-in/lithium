@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 const { PATHS, PAGES } = require('./paths');
 
+const isDev = process.env.NODE_ENV !== 'production';
+
 global.icons = path.resolve(PATHS.src, PATHS.icons);
 global.sortMq = function sortByDigits(array) {
 	const re = /\D/g;
@@ -29,7 +31,7 @@ const images = {
 		{
 			'loader': 'file-loader',
 			'options': {
-				'name': '[name].[contenthash].[ext]',
+				'name': isDev ? '[name].[ext]' : '[contenthash].[ext]',
 				'outputPath': PATHS.images,
 			},
 		},
@@ -41,7 +43,7 @@ const fonts = {
 	'use': {
 		'loader': 'file-loader',
 		'options': {
-			'name': '[name].[contenthash].[ext]',
+			'name': isDev ? '[name].[ext]' : '[contenthash].[ext]',
 			'outputPath': PATHS.fonts,
 		},
 	},
