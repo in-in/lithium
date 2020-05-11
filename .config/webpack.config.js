@@ -69,6 +69,16 @@ const config = {
 			(name) => new HtmlWebpackPlugin({
 				'filename': `${name}.html`,
 				'template': path.join(PATHS.pages, `${name}.pug`),
+				'templateParameters': (compilation, assets, assetTags, options) => ({
+					compilation,
+					'webpackConfig': compilation.options,
+					'htmlWebpackPlugin': {
+						'tags': assetTags,
+						'files': assets,
+						options,
+					},
+					'env': process.env.NODE_ENV,
+				}),
 			}),
 		),
 		new HtmlWebpackInlineSVGPlugin({
