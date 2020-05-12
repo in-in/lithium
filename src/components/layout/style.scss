@@ -2,7 +2,7 @@
 
 .layout {
 	display: grid;
-	grid-template-rows: repeat(44, 1fr);
+	grid-template-rows: repeat(44, 120px);
 	grid-template-columns: repeat(8, 1fr);
 	gap: t2c(16, breakpoint_xl);
 	background-color: #f5f5f5;

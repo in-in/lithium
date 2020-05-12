@@ -4,7 +4,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
-	height: 800px;
+	// height: 800px;
 	background-color: rgb(237, 20, 61, 0.7);
 
 	@include breakpoint(breakpoint_s) {
