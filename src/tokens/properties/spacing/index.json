@@ -4,22 +4,22 @@
 			"value": "0"
 		},
 		"xsm": {
-			"value": "4px"
+			"value": "4"
 		},
 		"sm": {
-			"value": "8px"
+			"value": "8"
 		},
 		"md": {
-			"value": "12px"
+			"value": "12"
 		},
 		"lg": {
-			"value": "16px"
+			"value": "16"
 		},
 		"xlg": {
-			"value": "24px"
+			"value": "24"
 		},
 		"xxlg": {
-			"value": "32px"
+			"value": "32"
 		},
 		"gutter": {
 			"value": "{spacing.lg.value}"
