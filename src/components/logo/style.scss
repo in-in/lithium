@@ -1,6 +1,16 @@
-#logo {
-	width: 2em;
+@use 'config' as *;
+
+.logo {
+	display: flex;
+	align-items: center;
+	text-transform: uppercase;
+	font-size: $size_font_ms_u_3 + em;
+	font-weight: 700;
+}
+
+#logo_icon {
+	width: em($spacing_xlg);
 	height: auto;
-	fill: #ff7f50;
-	stroke: #6495ed;
+	margin-right: em($spacing_xsm);
+	fill: $color_base_forest;
 }

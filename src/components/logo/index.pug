@@ -1,5 +1,6 @@
 include ../icon/index.pug
 
 mixin logo()
-	+icon('logo')(id=s.logo)
-	p lithium
+	a(href='#' class=s.logo)&attributes(attributes)
+		+icon('logo')(id=s.logo_icon)
+		| Lithium
