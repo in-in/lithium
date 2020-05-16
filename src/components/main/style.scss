@@ -5,7 +5,7 @@
 	grid-template-rows: repeat(37, 1fr);
 	grid-template-columns: inherit;
 	gap: inherit;
-	background-color: #5f9ea0;
+	// background-color: #5f9ea0;
 
 	&_section {
 		$section: compose(&);
@@ -15,7 +15,7 @@
 		&Hero {
 			composes: $section;
 			grid-row: 1 / span 6;
-			background-color: #4b0082;
+			// background-color: #4b0082;
 		}
 
 		&About {
