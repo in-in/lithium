@@ -110,3 +110,8 @@
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
+
+@mixin container($show: true) {
+	padding-right: if($show, t2c(16, breakpoint_xs), 0);
+	padding-left: if($show, t2c(16, breakpoint_xs), 0);
+}
