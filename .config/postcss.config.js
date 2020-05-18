@@ -20,6 +20,7 @@ module.exports = () => ({
 	'plugins': {
 		'autoprefixer': {},
 		'postcss-normalize': {},
+		'postcss-media-minmax': {},
 		'postcss-modules': {
 			'generateScopedName': isDev ? '[local]__[hash:base64:4]' : '[hash:base64:10]',
 			'getJSON': saveJSON,

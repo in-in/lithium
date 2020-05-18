@@ -5,9 +5,9 @@
 @use 'tokens' as *;
 @use 'breakpoint' as *;
 
-@mixin breakpoint($size) {
+@mixin breakpoint($size, $operator: '>=') {
 	@if map.get($breakpoints, $size) {
-		@media (min-width: map.get($breakpoints, $size) + px) {
+		@media (width $operator map.get($breakpoints, $size) + px) {
 			@content;
 		}
 	}
