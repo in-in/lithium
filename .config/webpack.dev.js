@@ -48,6 +48,7 @@ const config = {
 	'devtool': 'eval-cheap-module-source-map',
 	'devServer': {
 		'clientLogLevel': 'silent',
+		'host': '0.0.0.0',
 		'https': {
 			'cert': fs.readFileSync(SSL_CERT),
 			'key': fs.readFileSync(SSL_KEY),
