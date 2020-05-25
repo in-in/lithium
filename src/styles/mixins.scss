@@ -115,3 +115,11 @@
 	padding-right: if($show, t2c(16, breakpoint_xs), 0);
 	padding-left: if($show, t2c(16, breakpoint_xs), 0);
 }
+
+@mixin bg_resolution($data) {
+	@each $num, $src in $data {
+		@media (min-resolution: #{$num}x) {
+			background-image: url('#{$src}');
+		}
+	}
+}

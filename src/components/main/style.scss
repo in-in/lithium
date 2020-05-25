@@ -5,7 +5,6 @@
 	grid-template-rows: repeat(37, 1fr);
 	grid-template-columns: inherit;
 	gap: inherit;
-	// background-color: #5f9ea0;
 
 	&_section {
 		$section: compose(&);
@@ -15,7 +14,44 @@
 		&Hero {
 			composes: $section;
 			grid-row: 1 / span 6;
-			// background-color: #4b0082;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-image: url('https://satyr.io/640x320:377/0?type=png&text=hero_1&texture=cross');
+			background-size: cover;
+
+			@include breakpoint(breakpoint_s, '<') {
+				@include bg_resolution((
+					2: 'https://satyr.io/1280x320:377/0?type=png&text=hero_1@2x&texture=cross',
+					3: 'https://satyr.io/1920x320:377/0?type=png&text=hero_1@3x&texture=cross'
+				));
+			}
+
+			@include breakpoint(breakpoint_s) {
+				background-image: url('https://satyr.io/960x160:129/1?type=png&text=hero_2&texture=cross');
+
+				@include bg_resolution((
+					2: 'https://satyr.io/1920x160:129/1?type=png&text=hero_2@2x&texture=cross',
+					3: 'https://satyr.io/2880x160:129/1?type=png&text=hero_2@3x&texture=cross'
+				));
+			}
+
+			@include breakpoint(breakpoint_m) {
+				background-image: url('https://satyr.io/1280x128:79/2?type=png&text=hero_3&texture=cross');
+
+				@include bg_resolution((
+					2: 'https://satyr.io/2560x128:79/2?type=png&text=hero_3@2x&texture=cross',
+					3: 'https://satyr.io/3840x128:79/2?type=png&text=hero_3@3x&texture=cross'
+				));
+			}
+
+			@include breakpoint(breakpoint_l) {
+				background-image: url('https://satyr.io/1440x9:5/3?type=png&text=hero_4&texture=cross');
+
+				@include bg_resolution((
+					2: 'https://satyr.io/2880x9:5/3?type=png&text=hero_4@2x&texture=cross',
+					3: 'https://satyr.io/4320x9:5/3?type=png&text=hero_4@3x&texture=cross'
+				));
+			}
 		}
 
 		&About {
