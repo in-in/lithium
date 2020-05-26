@@ -22,7 +22,7 @@ module.exports = () => ({
 		'postcss-normalize': {},
 		'postcss-media-minmax': {},
 		'postcss-modules': {
-			'generateScopedName': isDev ? '[local]__[hash:base64:4]' : '[hash:base64:10]',
+			'generateScopedName': isDev ? '[local]' : '[hash:base64:10]',
 			'getJSON': saveJSON,
 		},
 		'postcss-sort-media-queries': {
