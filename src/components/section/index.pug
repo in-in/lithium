@@ -1,4 +1,6 @@
-mixin section(str='section')
+mixin section(str)
 	section(class=s.section)&attributes(attributes)
-		h2= `${str} component`
-		block
+		div(class=s.section_inner)
+			if str
+				h2= str
+			block

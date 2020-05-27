@@ -4,11 +4,14 @@ include ../img/index.pug
 
 mixin main()
 	main(class=s.main)&attributes(attributes)
-		+section('Hero')(class=s.main_sectionHero)
-		+section('About')(class=s.main_sectionAbout)
+		+section()(class=s.section__hero)
+			p A place where
+			h1 A creative agency for redemptive brands
+			button Get in touch
+		+section('About')(class=s.section__about)
 		+aside('Lorem ipsum, dolor sit amet consectetur')(class=s.main_aside)
-		+section('Projects')(class=s.main_sectionProjects)
-		+section('Features')(class=s.main_sectionFeatures)
+		+section('Projects')(class=s.section__projects)
+		+section('Features')(class=s.section__features)
 		block
 		//- +img('rocket-64.png', 'rocket' )
 		//- +img('blue.webp', 'blue')

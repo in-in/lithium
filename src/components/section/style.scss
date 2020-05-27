@@ -1,1 +1,74 @@
-// keep
+@use 'config' as *;
+
+.section {
+	$block: &;
+
+	grid-column: #{$grid_full};
+
+	&__hero {
+		display: grid;
+		grid-template-rows: repeat(6, 1fr);
+		grid-template-columns: inherit;
+		grid-row: 1 / span 6;
+		gap: inherit;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: url('https://satyr.io/640x320:377/0?type=png&text=hero_1&texture=cross');
+		background-size: cover;
+
+		#{$block}_inner {
+			grid-row: 2 / span 3;
+			grid-column: 2 / -2;
+			background-color: #d2b48c;
+		}
+
+		@include breakpoint(breakpoint_s, '<') {
+			@include bg_resolution((
+				2: 'https://satyr.io/1280x320:377/0?type=png&text=hero_1@2x&texture=cross',
+				3: 'https://satyr.io/1920x320:377/0?type=png&text=hero_1@3x&texture=cross'
+			));
+		}
+
+		@include breakpoint(breakpoint_s) {
+			background-image: url('https://satyr.io/960x160:129/1?type=png&text=hero_2&texture=cross');
+
+			@include bg_resolution((
+				2: 'https://satyr.io/1920x160:129/1?type=png&text=hero_2@2x&texture=cross',
+				3: 'https://satyr.io/2880x160:129/1?type=png&text=hero_2@3x&texture=cross'
+			));
+		}
+
+		@include breakpoint(breakpoint_m) {
+			background-image: url('https://satyr.io/1280x128:79/2?type=png&text=hero_3&texture=cross');
+
+			@include bg_resolution((
+				2: 'https://satyr.io/2560x128:79/2?type=png&text=hero_3@2x&texture=cross',
+				3: 'https://satyr.io/3840x128:79/2?type=png&text=hero_3@3x&texture=cross'
+			));
+		}
+
+		@include breakpoint(breakpoint_l) {
+			background-image: url('https://satyr.io/1440x9:5/3?type=png&text=hero_4&texture=cross');
+
+			@include bg_resolution((
+				2: 'https://satyr.io/2880x9:5/3?type=png&text=hero_4@2x&texture=cross',
+				3: 'https://satyr.io/4320x9:5/3?type=png&text=hero_4@3x&texture=cross'
+			));
+		}
+	}
+
+	&__about {
+		grid-row: 7 / span 5;
+		background-color: #001580;
+	}
+
+	&__projects {
+		grid-row: 13 / span 17;
+		background-color: #480080;
+	}
+
+	&__features {
+		grid-row: 31 / span 5;
+		background-color: #800057;
+	}
+}
