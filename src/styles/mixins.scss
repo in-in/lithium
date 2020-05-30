@@ -123,3 +123,23 @@
 		}
 	}
 }
+
+@mixin triangle($size, $dir: 'right') {
+	&::before {
+		content: '';
+		width: 0;
+		height: 0;
+		border-width:
+			if($dir == 'top', 0, $size)
+			if($dir == 'right', 0, $size)
+			if($dir == 'bottom', 0, $size)
+			if($dir == 'left', 0, $size);
+		border-style: solid;
+		border-color:
+			if($dir == 'bottom', currentColor, $color_base_crystal)
+			if($dir == 'left', currentColor, $color_base_crystal)
+			if($dir == 'top', currentColor, $color_base_crystal)
+			if($dir == 'right', currentColor, $color_base_crystal);
+		@content;
+	}
+}
