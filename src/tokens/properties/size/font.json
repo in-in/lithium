@@ -31,6 +31,9 @@
 		},
 		"line-height": {
 			"base": {
+				"value": "1"
+			},
+			"normal": {
 				"value": "1.65"
 			}
 		}

@@ -77,7 +77,7 @@
 }
 
 @mixin truncate_multiline_text(
-	$lh: $size_line_height_base,
+	$lh: $size_line_height_normal,
 	$unit: 1em,
 	$breakpoint: 4,
 	$color-bg: $white,

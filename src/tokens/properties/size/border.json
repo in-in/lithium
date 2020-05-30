@@ -1,0 +1,14 @@
+{
+	"border": {
+		"width": {
+			"base": {
+				"value": 1
+			}
+		},
+		"radius": {
+			"circle": {
+				"value": "50%"
+			}
+		}
+	}
+}
