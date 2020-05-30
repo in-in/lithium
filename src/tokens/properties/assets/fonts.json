@@ -6,12 +6,12 @@
 			},
 			"main": {
 				"woff2": {
-					"value": "Inconsolata"
+					"value": "Raleway"
 				}
 			},
 			"secondary": {
 				"woff2": {
-					"value": "Raleway"
+					"value": "Inconsolata"
 				}
 			}
 		}

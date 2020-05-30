@@ -1,6 +1,6 @@
 export const assetFontPath = "../assets/fonts/";
-export const assetFontMainWoff2 = "Inconsolata";
-export const assetFontSecondaryWoff2 = "Raleway";
+export const assetFontMainWoff2 = "Raleway";
+export const assetFontSecondaryWoff2 = "Inconsolata";
 export const assetIconLogo = "logo.svg";
 export const breakpointXs = "320";
 export const breakpointS = "640";
