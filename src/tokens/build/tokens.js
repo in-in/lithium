@@ -14,6 +14,7 @@ export const colorBaseSchnipo = "#dd8d54";
 export const colorBaseWhite = "#fff";
 export const colorBaseCrystal = "rgba(255, 255, 255, 0)";
 export const colorFontBase = "#004842";
+export const colorFontLight = "#e2eff9";
 export const gridFull = "'1 / -1'";
 export const borderWidthBase = 1;
 export const borderRadiusCircle = "50%";
