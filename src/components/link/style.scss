@@ -1,0 +1,32 @@
+@use 'config' as *;
+
+.link {
+	display: inline-flex;
+	align-items: center;
+	color: $color_base_schnipo;
+	font-size: $size_font_ms_0 + em;
+	font-weight: $typography_weight_links;
+	line-height: $size_line_height_base;
+
+	&_text {
+		border-bottom: em($border_width_base) solid;
+
+		@include hover() {
+			border-color: $color_base_crystal;
+		}
+	}
+
+	&::before {
+		content: '';
+		width: 0;
+		height: 0;
+		margin-inline-end: 0.25em;
+		border-width: 0.25em 0 0.25em 0.25em;
+		border-style: solid;
+		border-color:
+			$color_base_crystal
+			$color_base_crystal
+			$color_base_crystal
+			currentColor;
+	}
+}
