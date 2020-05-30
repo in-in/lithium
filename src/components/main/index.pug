@@ -1,14 +1,15 @@
-include ../section/index.pug
 include ../aside/index.pug
+include ../heading/index.pug
 include ../img/index.pug
 include ../link/index.pug
+include ../section/index.pug
 include ../text/index.pug
 
 mixin main()
 	main(class=s.main)&attributes(attributes)
 		+section()(class=s.section__hero)
 			+text('A place where')
-			h1 A creative agency for redemptive brands
+			+heading('A creative agency for redemptive brands', 'h1', 'h1')
 			+link('Get in touch', '#0')
 		+section('About')(class=s.section__about)
 		+aside('Lorem ipsum, dolor sit amet consectetur')(class=s.main_aside)

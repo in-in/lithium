@@ -1,0 +1,4 @@
+mixin heading(text, tag='p', className)
+	- let mixClass = className ? `heading__${className}` : 'heading';
+	#{tag}(class=s[mixClass])&attributes(attributes)
+		= text
