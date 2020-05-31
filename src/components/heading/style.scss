@@ -1,42 +1,33 @@
 @use 'config' as *;
 
 .heading {
-	$root: compose(&);
-
 	font-weight: $typography_weight_bold;
 
 	&__light {
-		composes: $root;
 		color: $color_font_light;
 	}
 
 	&__h1 {
-		composes: $root;
 		font-size: $size_font_ms_u_5 + em;
 	}
 
 	&__h2 {
-		composes: $root;
 		font-size: $size_font_ms_u_4 + em;
 	}
 
 	&__h3 {
-		composes: $root;
 		font-size: $size_font_ms_u_3 + em;
 	}
 
 	&__h4 {
-		composes: $root;
 		font-size: $size_font_ms_u_2 + em;
 	}
 
 	&__h5 {
-		composes: $root;
 		font-size: $size_font_ms_u_1 + em;
 	}
 
 	&__h6 {
-		composes: $root;
 		font-size: $size_font_ms_0 + em;
 	}
 }

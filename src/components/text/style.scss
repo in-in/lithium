@@ -1,5 +1,7 @@
 @use 'config' as *;
 
 .text {
-	color: $color_base_husky;
+	&__light {
+		color: $color_font_light;
+	}
 }

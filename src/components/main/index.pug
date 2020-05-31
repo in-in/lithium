@@ -8,8 +8,10 @@ include ../text/index.pug
 mixin main()
 	main(class=s.main)&attributes(attributes)
 		+section()(class=s.section__hero)
-			+text('A place where')
-			+heading('A creative agency for redemptive brands', 'h1', 'h1')
+			+text('A place where', 'light')
+			+heading('A creative agency for redemptive brands', 'h1', 'h1')(
+				class=s.text__light
+				)
 			+link('Get in touch', '#0')
 		+section('About')(class=s.section__about)
 		+aside('Lorem ipsum, dolor sit amet consectetur')(class=s.main_aside)

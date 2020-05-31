@@ -1,4 +1,5 @@
-mixin heading(text, tag='p', className)
-	- let mixClass = className ? `heading__${className}` : 'heading';
-	#{tag}(class=s[mixClass])&attributes(attributes)
+mixin heading(text, tag='p', modifier)
+	#{tag}(
+		class=cx(s.heading, s[`heading__${modifier}`])
+		)&attributes(attributes)
 		= text
