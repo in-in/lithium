@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
+const classnames = require('classnames');
 const { PATHS, PAGES } = require('./paths');
 
 const isDev = process.env.NODE_ENV !== 'production';
@@ -14,13 +15,14 @@ global.sortMq = function sortByDigits(array) {
 		));
 	return (array);
 };
+global.cx = classnames;
 
 const pug = {
 	'test': /\.pug$/,
 	'use': {
 		'loader': 'pug-loader',
 		'options': {
-			'globals': ['icons', 'sortMq'],
+			'globals': ['icons', 'sortMq', 'cx'],
 		},
 	},
 };
