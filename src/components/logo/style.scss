@@ -4,8 +4,8 @@
 	display: flex;
 	align-items: center;
 	text-transform: uppercase;
-	font-size: $size_font_ms_u_3 + em;
-	font-weight: 700;
+	font-size: $size_font_ms_u_2 + em;
+	font-weight: $typography_weight_bold;
 }
 
 #logo_icon {
