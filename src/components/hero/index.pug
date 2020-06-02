@@ -1,0 +1,12 @@
+include ../heading/index.pug
+include ../link/index.pug
+include ../text/index.pug
+
+mixin hero(str='hero')
+	div(class=s.hero)&attributes(attributes)
+		+text('A place where', 'light')
+		+heading('A creative agency for redemptive brands', 'h1', 'h1')(
+				class=s.text__light
+				)
+		+link('Get in touch', '#0')
+		block

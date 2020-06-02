@@ -1,0 +1,9 @@
+@use 'config' as *;
+
+.hero {
+	background-color: #186;
+
+	> *:not(:last-child) {
+		margin-bottom: em($spacing_lg);
+	}
+}

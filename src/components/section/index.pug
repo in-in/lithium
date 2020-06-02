@@ -1,6 +1,5 @@
 mixin section(str)
 	section(class=s.section)&attributes(attributes)
-		div(class=s.section_inner)
-			if str
-				h2= str
-			block
+		if str
+			h2= str
+		block
