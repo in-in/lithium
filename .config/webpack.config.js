@@ -9,11 +9,14 @@ const isDev = process.env.NODE_ENV !== 'production';
 global.icons = path.resolve(PATHS.src, PATHS.icons);
 global.sortMq = function sortByDigits(array) {
 	const re = /\D/g;
-	array
-		.sort((a, b) => (
-			parseInt(a.query.replace(re, ''), 10) - parseInt(b.query.replace(re, ''), 10)
-		));
-	return (array);
+	if (Array.isArray(array)) {
+		array
+			.sort((a, b) => (
+				parseInt(a.query.replace(re, ''), 10) - parseInt(b.query.replace(re, ''), 10)
+			));
+		return (array);
+	}
+	return false;
 };
 global.cx = classnames;
 
