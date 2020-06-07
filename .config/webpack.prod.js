@@ -5,7 +5,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 const CssoWebpackPlugin = require('csso-webpack-plugin').default;
-const MediaQueryPlugin = require('media-query-plugin');
 const common = require('./webpack.config');
 const { PATHS, PAGES } = require('./paths');
 
@@ -14,7 +13,6 @@ const styles = {
 	'use': [
 		MiniCssExtractPlugin.loader,
 		'css-loader',
-		MediaQueryPlugin.loader,
 		{
 			'loader': 'postcss-loader',
 			'options': {
@@ -109,54 +107,6 @@ const config = {
 			'filename': '[name].[contenthash].css',
 		}),
 		new CssoWebpackPlugin(),
-		new MediaQueryPlugin({
-			'include': true,
-			'queries': {
-				// s
-				'(min-width: 640px)': 's',
-				[
-				'(min-width: 640px)and (-webkit-min-device-pixel-ratio: 2), '
-				+ '(min-width: 640px)and (min-resolution: 2x)'
-				]: 's',
-				[
-				'(min-width: 640px)and (-webkit-min-device-pixel-ratio: 3), '
-				+ '(min-width: 640px)and (min-resolution: 3x)'
-				]: 's',
-
-				// m
-				'(min-width: 960px)': 'm',
-				[
-				'(min-width: 960px)and (-webkit-min-device-pixel-ratio: 2), '
-				+ '(min-width: 960px)and (min-resolution: 2x)'
-				]: 'm',
-				[
-				'(min-width: 960px)and (-webkit-min-device-pixel-ratio: 3), '
-				+ '(min-width: 960px)and (min-resolution: 3x)'
-				]: 'm',
-
-				// l
-				'(min-width: 1280px)': 'l',
-				[
-				'(min-width: 1280px)and (-webkit-min-device-pixel-ratio: 2), '
-				+ '(min-width: 1280px)and (min-resolution: 2x)'
-				]: 'l',
-				[
-				'(min-width: 1280px)and (-webkit-min-device-pixel-ratio: 3), '
-				+ '(min-width: 1280px)and (min-resolution: 3x)'
-				]: 'l',
-
-				// xl
-				'(min-width: 1440px)': 'xl',
-				[
-				'(min-width: 1440px)and (-webkit-min-device-pixel-ratio: 2), '
-				+ '(min-width: 1440px)and (min-resolution: 2x)'
-				]: 'xl',
-				[
-				'(min-width: 1440px)and (-webkit-min-device-pixel-ratio: 3), '
-				+ '(min-width: 1440px)and (min-resolution: 3x)'
-				]: 'xl',
-			},
-		}),
 	],
 	'module': {
 		'rules': [
