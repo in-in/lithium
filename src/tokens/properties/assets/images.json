@@ -1,0 +1,12 @@
+{
+	"asset": {
+		"image": {
+			"dir": {
+				"value": "../assets/images/"
+			},
+			"hero": {
+				"value": "hero.svg"
+			}
+		}
+	}
+}
