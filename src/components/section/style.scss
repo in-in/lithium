@@ -13,7 +13,7 @@
 		gap: inherit;
 		background-position: center;
 		background-repeat: no-repeat;
-		background-image: url('../assets/images/hero/hero_1.png');
+		background-image: url('../assets/images/hero.svg');
 		background-size: cover;
 
 		#{$block}_inner {
@@ -23,36 +23,6 @@
 			@include breakpoint(breakpoint_m) {
 				grid-column: 2 / span 3;
 			}
-		}
-
-		@include breakpoint(breakpoint_s, '<') {
-			@include bg_resolution((
-				2: '../assets/images/hero/hero_1@2x.png'
-			));
-		}
-
-		@include breakpoint(breakpoint_s) {
-			background-image: url('../assets/images/hero/hero_2.png');
-
-			@include bg_resolution((
-				2: '../assets/images/hero/hero_2@2x.png'
-			));
-		}
-
-		@include breakpoint(breakpoint_m) {
-			background-image: url('../assets/images/hero/hero_3.png');
-
-			@include bg_resolution((
-				2: '../assets/images/hero/hero_3@2x.png'
-			));
-		}
-
-		@include breakpoint(breakpoint_l) {
-			background-image: url('../assets/images/hero/hero_4.png');
-
-			@include bg_resolution((
-				2: '../assets/images/hero/hero_4@2x.png'
-			));
 		}
 	}
 

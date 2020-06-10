@@ -20,7 +20,7 @@ const pug = {
 };
 
 const images = {
-	'test': /\.(png|jpe?g|webp)$/i,
+	'test': /\.(png|jpe?g|webp|svg)$/i,
 	'use': [
 		{
 			'loader': 'file-loader',
