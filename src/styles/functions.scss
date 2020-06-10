@@ -61,3 +61,7 @@
 @function aspect-ratio($size, $ratio) {
 	@return calc(#{$size} / (#{$ratio}));
 }
+
+@function image-path($name, $path: $asset_image_dir) {
+	@return $path + $name;
+}
