@@ -2,15 +2,19 @@
 @use 'config' as *;
 
 .hero {
+	overflow: hidden;
 	padding: em($spacing_sm);
 	background-image:
 		linear-gradient(
 			145deg,
-			$color_base_forest 45%,
 			color.scale(
 				$color_base_forest,
-				$alpha: -15%
-			) 55%
+				$alpha: -5%
+			) 40%,
+			color.scale(
+				$color_base_forest,
+				$alpha: -30%
+			) 60%
 		);
 
 	> *:not(:last-child) {
