@@ -6,6 +6,7 @@ module.exports = {
 		'stylelint-use-nesting',
 	],
 	'rules': {
+		'alpha-value-notation': 'percentage',
 		'at-rule-blacklist': null,
 		'at-rule-empty-line-before': [
 			'always',
@@ -35,6 +36,7 @@ module.exports = {
 		'block-opening-brace-newline-before': null,
 		'block-opening-brace-space-after': 'always-single-line',
 		'block-opening-brace-space-before': 'always',
+		'color-function-notation': 'modern',
 		'color-hex-case': 'lower',
 		'color-hex-length': 'short',
 		'color-named': [
