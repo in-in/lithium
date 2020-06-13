@@ -1,7 +1,8 @@
 @use 'tokens' as *;
+@use 'functions' as *;
 
 SVG {
 	display: block;
-	width: 1em;
-	height: 1em;
+	width: em($size_font_ms_0);
+	height: em($size_font_ms_0);
 }
