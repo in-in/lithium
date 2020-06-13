@@ -6,7 +6,7 @@ include ../components/main/index.pug
 include ../components/footer/index.pug
 
 prepend head
-	- const pageTitle = 'Home';
+	- let pageTitle = 'Home';
 
 block body
 	+header()(class=s.layout_header)
