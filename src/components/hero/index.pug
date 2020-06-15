@@ -2,11 +2,9 @@ include ../heading/index.pug
 include ../link/index.pug
 include ../text/index.pug
 
-mixin hero(str='hero')
+mixin hero()
 	div(class=s.hero)&attributes(attributes)
 		+text(data.hero.subheading, 'light')
 		+heading(data.hero.heading, 'h1', 'h1')(
-				class=s.text__light
-				)
+				class=s.text__light)
 		+link('Get in touch', '#0')
-		block

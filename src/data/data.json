@@ -2,5 +2,10 @@
 	"hero": {
 		"heading": "A creative agency for redemptive brands",
 		"subheading": "A place where"
+	},
+	"about": {
+		"heading": "Strategy. Design  Content. Technology Development ",
+		"subheading": "What we do for you",
+		"description": "There’s no secret sauce, no wizard behind the curtain. What makes Aerolab tick is an interdisciplinary team with a framework that fosters candid collaboration."
 	}
 }

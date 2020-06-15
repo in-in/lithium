@@ -1,0 +1,10 @@
+include ../heading/index.pug
+include ../link/index.pug
+include ../text/index.pug
+
+mixin about()
+	div(class=s.about)&attributes(attributes)
+		+text(data.about.subheading)
+		+heading(data.about.heading, 'h2', 'h2')
+		+text(data.about.description)
+		+link('More about us', '#0')

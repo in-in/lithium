@@ -2,12 +2,15 @@ include ../aside/index.pug
 include ../img/index.pug
 include ../section/index.pug
 include ../hero/index.pug
+include ../about/index.pug
 
 mixin main()
 	main(class=s.main)&attributes(attributes)
 		+section()(class=s.section__hero)
-			+hero('hero')(class=s.section_inner)
-		+section('About')(class=s.section__about)
+			+hero()(class=s.section_inner)
+		+section()(class=s.section__about)
+			+about()(class=cx(s.section_inner, s.section_inner__start))
+			div(class=cx(s.section_inner, s.section_inner__end)) With More than 10 Years of Knowledge and Expertise we Design and Code Websites and Apps, We Build Brands and Help Them Succeed
 		+aside('Lorem ipsum, dolor sit amet consectetur')(class=s.main_aside)
 		+section('Projects')(class=s.section__projects)
 		+section('Features')(class=s.section__features)
