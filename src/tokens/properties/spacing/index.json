@@ -1,28 +1,34 @@
 {
 	"spacing": {
-		"none": {
+		"0": {
 			"value": "0"
 		},
-		"xsm": {
+		"40": {
 			"value": "4"
 		},
-		"sm": {
+		"60": {
 			"value": "8"
 		},
-		"md": {
+		"80": {
 			"value": "12"
 		},
-		"lg": {
+		"100": {
 			"value": "16"
 		},
-		"xlg": {
+		"110": {
 			"value": "24"
 		},
-		"xxlg": {
+		"120": {
 			"value": "32"
 		},
+		"130": {
+			"value": "40"
+		},
+		"140": {
+			"value": "48"
+		},
 		"gutter": {
-			"value": "{spacing.lg.value}"
+			"value": "{spacing.100.value}"
 		}
 	}
 }

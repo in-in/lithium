@@ -1,8 +1,7 @@
 @use 'config' as *;
 
 .about {
-	// background-color: #984;
 	> *:not(:last-child) {
-		margin-bottom: em($spacing_lg);
+		margin-bottom: em($spacing_100);
 	}
 }
