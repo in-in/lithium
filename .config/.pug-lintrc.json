@@ -1,6 +1,7 @@
 {
 	"disallowAttributeInterpolation": true,
 	"disallowClassAttributeWithStaticValue": true,
+	"disallowClassLiterals": true,
 	"disallowClassLiteralsBeforeIdLiterals": true,
 	"disallowDuplicateAttributes": true,
 	"disallowIdAttributeWithStaticValue": true,
@@ -9,7 +10,6 @@
 	"disallowSpacesInsideAttributeBrackets": true,
 	"disallowStringConcatenation": true,
 	"disallowTrailingSpaces": true,
-	"requireClassLiteralsBeforeAttributes": true,
 	"requireIdLiteralsBeforeAttributes": true,
 	"requireLineFeedAtFileEnd": true,
 	"requireLowerCaseAttributes": true,
