@@ -65,3 +65,7 @@
 @function image-path($name, $path: $asset_image_dir) {
 	@return $path + $name;
 }
+
+@function compose-shadow($value, $color) {
+	@return $value $color;
+}

@@ -7,5 +7,13 @@
 		"heading": "Strategy. Design  Content. Technology Development ",
 		"subheading": "What we do for you",
 		"description": "There’s no secret sauce, no wizard behind the curtain. What makes Aerolab tick is an interdisciplinary team with a framework that fosters candid collaboration."
-	}
+	},
+	"review": [
+		{
+			"quote": "With More than 10 Years of Knowledge and Expertise we Design and Code Websites and Apps, We Build Brands and Help Them Succeed",
+			"avatar": "review_1.png",
+			"name": "Emily Ewing",
+			"company": "Designer at CompanyX"
+		}
+	]
 }

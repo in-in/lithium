@@ -1,0 +1,13 @@
+include ../img/index.pug
+
+mixin review(data)
+	- let {quote, avatar, name, company} = data
+
+	div(class=s.review)&attributes(attributes)
+		blockquote(class=cx(s.text, s.review_quote))!= `&ldquo;${quote}&rdquo;`
+		footer(class=s.review_footer)
+			figure(class=s.review_avatar)
+				+img(avatar, name)
+			cite(class=s.review_meta)
+				strong(class=s.review_name)= name
+				span(class=s.review_company)= company

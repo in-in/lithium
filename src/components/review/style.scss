@@ -1,0 +1,38 @@
+@use 'sass:color';
+@use 'sass:string';
+@use 'config' as *;
+
+.review {
+	padding: em($spacing_110);
+	border-radius: em($border_width_normal);
+	box-shadow:
+		compose-shadow(
+			$shadow_review, color.scale($color_base_forest, $alpha: -85%)
+		);
+
+	&_quote {
+		margin-block-end: em($spacing_110);
+		font-style: italic;
+	}
+
+	&_footer {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	&_avatar {
+		width: em($spacing_140);
+		height: em($spacing_140);
+		margin-inline-end: em($spacing_60);
+		outline: 1px solid #000;
+	}
+
+	&_meta {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&_name {
+		font-weight: $typography_weight_bold;
+	}
+}
