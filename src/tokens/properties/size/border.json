@@ -3,6 +3,9 @@
 		"width": {
 			"base": {
 				"value": 1
+			},
+			"normal": {
+				"value": 8
 			}
 		},
 		"radius": {
