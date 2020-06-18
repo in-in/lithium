@@ -1,31 +1,23 @@
 mixin picture(src, alt)
 	- let getPath = (name) => require(`../assets/images/` + name).default;
 	- let getName = (name) => parseFilename(name).name;
+	- let getExt = (name) => parseFilename(name).ext;
 
-	picture
+	mixin source(src, ext)
 		source(
 			srcset=`
-				${getPath(`${getName(src)}@1x.webp`)} 1x,
-				${getPath(`${getName(src)}@2x.webp`)} 2x
+				${getPath(`${getName(src)}@1x.${ext}`)} 1x,
+				${getPath(`${getName(src)}@2x.${ext}`)} 2x
 			`
-			type='image/webp'
+			type=`image/${ext === 'jpg' ? 'jpeg' : ext}`
 		)
-		if (parseFilename(src).ext === '.jpg')
-			source(
-				srcset=`
-					${getPath(`${getName(src)}@1x.jpg`)} 1x,
-					${getPath(`${getName(src)}@2x.jpg`)} 2x
-				`
-				type='image/jpeg'
-			)
-		if (parseFilename(src).ext === '.png')
-			source(
-				srcset=`
-					${getPath(`${getName(src)}@1x.png`)} 1x,
-					${getPath(`${getName(src)}@2x.png`)} 2x
-				`
-				type='image/png'
-			)
+
+	picture
+		+source(src, 'webp')
+		if (getExt(src) === '.jpg')
+			+source(src, 'jpg')
+		if (getExt(src) === '.png')
+			+source(src, 'png')
 		img(
-			src= getPath(`${getName(src)}@1x${parseFilename(src).ext}`)
+			src= getPath(`${getName(src)}@1x${getExt(src)}`)
 			alt=alt)
