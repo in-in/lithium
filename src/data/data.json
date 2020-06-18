@@ -12,8 +12,27 @@
 		{
 			"quote": "With More than 10 Years of Knowledge and Expertise we Design and Code Websites and Apps, We Build Brands and Help Them Succeed",
 			"avatar": "review_1.png",
-			"name": "Emily Ewing",
-			"company": "Designer at CompanyX"
+			"name": "Genevieve Rodriquez",
+			"company": "Founder & CEO, Webovio",
+			"mod": "large"
+		},
+		{
+			"quote": "In my history of working with trade show vendors, I can honestly say that there is not one company that I've ever worked with that has better service than Exhibit Systems.",
+			"avatar": "review_2.png",
+			"name": "Angel Armstrong",
+			"company": "Founder & CEO, Google"
+		},
+		{
+			"quote": "I know they are going to be honest with me. I am not going to get a subpar product; I know it is going to be good. That is the number one advantage of working with Exhibit Systems.",
+			"avatar": "review_3.png",
+			"name": "Lina Hart",
+			"company": "Founder & CEO, Jico"
+		},
+		{
+			"quote": "Exhibit Systems is not a provider. They are not a supplier. They are a partner with expertise in making trade shows effective.",
+			"avatar": "review_4.png",
+			"name": "Eunice Oliver",
+			"company": "Founder & CEO, Zeem"
 		}
 	]
 }

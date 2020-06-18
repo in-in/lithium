@@ -3,12 +3,23 @@
 @use 'config' as *;
 
 .review {
+	$root: &;
+
 	padding: em($spacing_110);
 	border-radius: em($border_width_normal);
 	box-shadow:
 		compose-shadow(
 			$shadow_review, color.scale($color_base_forest, $alpha: -85%)
 		);
+
+	&__large {
+		font-size: $size_font_ms_u_1 + em;
+
+		#{$root}_avatar {
+			width: em($spacing_140 * 1.5);
+			height: em($spacing_140 * 1.5);
+		}
+	}
 
 	&_quote {
 		margin-block-end: em($spacing_110);
@@ -21,10 +32,16 @@
 	}
 
 	&_avatar {
+		flex-shrink: 0;
 		width: em($spacing_140);
 		height: em($spacing_140);
+		overflow: hidden;
 		margin-inline-end: em($spacing_60);
-		outline: 1px solid #000;
+
+		IMG {
+			width: 100%;
+			border-radius: $border_radius_circle;
+		}
 	}
 
 	&_meta {
@@ -34,5 +51,9 @@
 
 	&_name {
 		font-weight: $typography_weight_bold;
+	}
+
+	&_company {
+		font-size: $size_font_ms_d_1 + em;
 	}
 }
