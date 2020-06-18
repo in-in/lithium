@@ -6,15 +6,16 @@ const { PATHS, PAGES } = require('./paths');
 
 const isDev = process.env.NODE_ENV !== 'production';
 
-global.icons = path.resolve(PATHS.src, PATHS.icons);
+global.icons = path.join(PATHS.src, PATHS.icons);
 global.cx = classnames;
+global.parseFilename = (filename) => path.parse(filename);
 
 const pug = {
 	'test': /\.pug$/,
 	'use': {
 		'loader': 'pug-loader',
 		'options': {
-			'globals': ['icons', 'sortMq', 'cx'],
+			'globals': ['icons', 'cx', 'parseFilename'],
 		},
 	},
 };

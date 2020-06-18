@@ -1,0 +1,31 @@
+mixin picture(src, alt)
+	- let getPath = (name) => require(`../assets/images/` + name).default;
+	- let getName = (name) => parseFilename(name).name;
+
+	picture
+		source(
+			srcset=`
+				${getPath(`${getName(src)}@1x.webp`)} 1x,
+				${getPath(`${getName(src)}@2x.webp`)} 2x
+			`
+			type='image/webp'
+		)
+		if (parseFilename(src).ext === '.jpg')
+			source(
+				srcset=`
+					${getPath(`${getName(src)}@1x.jpg`)} 1x,
+					${getPath(`${getName(src)}@2x.jpg`)} 2x
+				`
+				type='image/jpeg'
+			)
+		if (parseFilename(src).ext === '.png')
+			source(
+				srcset=`
+					${getPath(`${getName(src)}@1x.png`)} 1x,
+					${getPath(`${getName(src)}@2x.png`)} 2x
+				`
+				type='image/png'
+			)
+		img(
+			src= getPath(`${getName(src)}@1x${parseFilename(src).ext}`)
+			alt=alt)
