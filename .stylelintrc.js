@@ -124,7 +124,7 @@ module.exports = {
 		'linebreaks': 'unix',
 		'max-empty-lines': 1,
 		'max-line-length': [80, { 'ignore': ['comments'] }],
-		'max-nesting-depth': 3,
+		'max-nesting-depth': 4,
 		'media-feature-colon-space-after': 'always',
 		'media-feature-colon-space-before': 'never',
 		'media-feature-name-blacklist': null,
