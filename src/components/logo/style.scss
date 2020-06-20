@@ -7,11 +7,11 @@
 	font-size: $size_font_ms_u_2 + em;
 	font-weight: $typography_weight_bold;
 	filter: drop-shadow(0 0 em($spacing_40) $color_base_husky);
-}
 
-#logo_icon {
-	width: em($spacing_110);
-	height: auto;
-	margin-inline-end: em($spacing_40);
-	fill: $color_base_forest;
+	&_icon {
+		width: em($spacing_110);
+		height: auto;
+		margin-inline-end: em($spacing_40);
+		fill: $color_base_forest;
+	}
 }
