@@ -97,7 +97,7 @@
 		position: absolute;
 		right: 0;
 		bottom: 0;
-		z-index: 1;
+		z-index: 10;
 		width: calc((#{$lh} * #{$unit}) + 3ch);
 		height: calc(((((#{$breakpoint} - 1) * #{$lh}) * #{$unit}) - 100%) * -1000);
 		max-height: calc(#{$lh} * #{$unit});
