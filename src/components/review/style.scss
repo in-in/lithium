@@ -5,6 +5,7 @@
 .review {
 	$root: &;
 
+	z-index: 10;
 	padding: em($spacing_110);
 	border-radius: em($border_width_normal);
 	box-shadow:
@@ -13,6 +14,7 @@
 		);
 
 	&__large {
+		padding-block-start: em($spacing_140);
 		font-size: $size_font_ms_u_1 + em;
 
 		#{$root}_avatar {
