@@ -34,5 +34,37 @@
 			"name": "Eunice Oliver",
 			"company": "Founder & CEO, Zeem"
 		}
+	],
+	"partners": [
+		{
+			"name": "Mozilla",
+			"link": "https://www.mozilla.org",
+			"src": "assetIconPartners1"
+		},
+		{
+			"name": "Zoho",
+			"link": "https://www.zoho.com",
+			"src": "assetIconPartners2"
+		},
+		{
+			"name": "Microsoft",
+			"link": "https://www.microsoft.com",
+			"src": "assetIconPartners3"
+		},
+		{
+			"name": "Salesforce",
+			"link": "https://www.salesforce.com",
+			"src": "assetIconPartners4"
+		},
+		{
+			"name": "LinkedIn",
+			"link": "https://www.linkedin.com",
+			"src": "assetIconPartners5"
+		},
+		{
+			"name": "Mastercard",
+			"link": "https://www.mastercard.com",
+			"src": "assetIconPartners6"
+		}
 	]
 }

@@ -3,6 +3,24 @@
 		"icon": {
 			"logo": {
 				"value": "logo.svg"
+			},
+			"partners1": {
+				"value": "mozilla.svg"
+			},
+			"partners2": {
+				"value": "zoho.svg"
+			},
+			"partners3": {
+				"value": "microsoft.svg"
+			},
+			"partners4": {
+				"value": "salesforce.svg"
+			},
+			"partners5": {
+				"value": "linkedin.svg"
+			},
+			"partners6": {
+				"value": "mastercard.svg"
 			}
 		}
 	}

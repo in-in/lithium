@@ -1,8 +1,9 @@
-include ../aside/index.pug
-include ../section/index.pug
-include ../hero/index.pug
 include ../about/index.pug
+include ../aside/index.pug
+include ../hero/index.pug
+include ../partners/index.pug
 include ../review/index.pug
+include ../section/index.pug
 
 mixin main()
 	main(class=s.main)&attributes(attributes)
@@ -11,7 +12,8 @@ mixin main()
 		+section()(class=s.section__about)
 			+about()(class=cx(s.section_inner, s.section_inner__start))
 			+review(data.review[0])(class=cx(s.section_inner, s.section_inner__end))
-		+aside('Lorem ipsum, dolor sit amet consectetur')(class=s.main_aside)
+		+aside()(class=s.main_aside)
+			+partners(data.partners)
 		+section('Projects')(class=s.section__projects)
 		+section('Features')(class=s.section__features)
 		block

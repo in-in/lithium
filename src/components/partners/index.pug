@@ -1,0 +1,9 @@
+include ../icon/index.pug
+
+mixin partners(data)
+	ul(class=s.partners)&attributes(attributes)
+		each item in data
+			- let {name, link, src} = item;
+			li(class=s.partners_item)
+				a(href=link title=name target='_blank' rel='noopener' class=s.partners_link)
+					+icon(src)(class=s.partners_icon)

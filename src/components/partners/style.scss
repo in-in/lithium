@@ -1,0 +1,41 @@
+@use 'sass:color';
+@use 'config' as *;
+
+.partners {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(em(80), 1fr));
+	align-items: center;
+	gap: em($spacing_100);
+	height: 100%;
+	padding: em($spacing_100);
+	box-shadow:
+		compose-shadow(
+			$shadow_review, color.scale($color_base_forest, $alpha: -85%)
+		);
+
+	&_item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		padding: em($spacing_60);
+
+		@include breakpoint(breakpoint_m) {
+			padding: em($spacing_100);
+		}
+	}
+
+	&_link {
+		display: block;
+		filter: grayscale(100%) contrast(25%);
+
+		@include hover() {
+			filter: none;
+		}
+	}
+
+	&_icon {
+		width: 100%;
+		height: 100%;
+	}
+}
