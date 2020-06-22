@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use 'sass:map';
 @use 'sass:meta';
 @use 'sass:string';
@@ -66,6 +67,8 @@
 	@return $path + $name;
 }
 
-@function compose-shadow($value, $color) {
+@function compose-shadow(
+	$value,
+	$color: color.scale($color_base_forest, $alpha: -85%)) {
 	@return $value $color;
 }

@@ -1,5 +1,3 @@
-@use 'sass:color';
-@use 'sass:string';
 @use 'config' as *;
 
 .review {
@@ -8,10 +6,7 @@
 	z-index: 10;
 	padding: em($spacing_110);
 	border-radius: em($border_width_normal);
-	box-shadow:
-		compose-shadow(
-			$shadow_review, color.scale($color_base_forest, $alpha: -85%)
-		);
+	box-shadow: compose-shadow($shadow_review);
 
 	&__large {
 		padding-block-start: em($spacing_140);
