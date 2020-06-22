@@ -11,6 +11,8 @@
 	&_text {
 		border-bottom: em($border_width_base) solid;
 
+		@include transition(border-color);
+
 		@include hover() {
 			border-color: $color_base_crystal;
 		}

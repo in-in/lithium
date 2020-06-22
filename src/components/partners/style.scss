@@ -25,6 +25,8 @@
 		display: block;
 		filter: grayscale(100%) contrast(25%);
 
+		@include transition(filter);
+
 		@include hover() {
 			filter: none;
 		}

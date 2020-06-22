@@ -31,23 +31,16 @@
 }
 /* stylelint-enable */
 
-@mixin hover_transition() {
-	transition-property: background-color, color, fill;
-	transition-duration: var(--transition_duration);
-	transition-timing-function: var(--transition_easeing);
+@mixin transition(
+	$prop: all,
+	$duration: $time_base,
+	$timing: $easing_base) {
+	transition-property: $prop;
+	transition-duration: $duration;
+	transition-timing-function: $timing;
 }
 
 @mixin hover($selector: null, $combinator: ' ') {
-	@if $selector {
-		#{$selector} {
-			@include hover_transition();
-		}
-	}
-
-	@else {
-		@include hover_transition();
-	}
-
 	@media (hover: hover) {
 		&:hover#{$combinator}#{$selector} {
 			@content;
