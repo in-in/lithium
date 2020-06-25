@@ -2,6 +2,7 @@ include ../about/index.pug
 include ../aside/index.pug
 include ../hero/index.pug
 include ../partners/index.pug
+include ../projects/index.pug
 include ../review/index.pug
 include ../section/index.pug
 
@@ -14,6 +15,7 @@ mixin main()
 			+review(data.review[0])(class=cx(s.section_inner, s.section_inner__end))
 		+aside()(class=s.main_aside)
 			+partners(data.partners)
-		+section('Projects')(class=s.section__projects)
+		+section()(class=s.section__projects)
+			+projects(data.projects.list)(class=s.section_inner)
 		+section('Features')(class=s.section__features)
 		block

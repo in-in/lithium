@@ -4,7 +4,7 @@
 		"subheading": "A place where"
 	},
 	"about": {
-		"heading": "Strategy. Design  Content. Technology Development ",
+		"heading": "Strategy. Design  Content. Technology Development",
 		"subheading": "What we do for you",
 		"description": "There’s no secret sauce, no wizard behind the curtain. What makes Aerolab tick is an interdisciplinary team with a framework that fosters candid collaboration."
 	},
@@ -66,5 +66,28 @@
 			"link": "https://www.mastercard.com",
 			"src": "assetIconPartners6"
 		}
-	]
+	],
+	"projects": {
+		"heading": "We Have Some Awesome Project",
+		"list": [
+			{
+				"title": "The wall new Balenciaga.com",
+				"description": "Dvd printing is an important feature used by large and small DVD production houses to print information on DVDs.",
+				"link": "#",
+				"image": "assetIconProject1"
+			},
+			{
+				"title": "Is this the future of 3D model?",
+				"description": "While it was just a TV show, that little speech at the beginning of the original Star Trek show really did do a good job of capturing our feelings about space.",
+				"link": "#",
+				"image": "assetIconProject2"
+			},
+			{
+				"title": " Is this the future of Online Booking",
+				"description": "You should be able to find several indispensable facts about motivation in the following paragraphs.",
+				"link": "#",
+				"image": "assetIconProject3"
+			}
+		]
+	}
 }
