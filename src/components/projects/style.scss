@@ -1,5 +1,7 @@
 @use 'config' as *;
 
+$project: '.project';
+
 .projects {
 	display: grid;
 	grid-template-rows: repeat(16, 1fr);
@@ -42,16 +44,33 @@
 			&:nth-child(#{$i}) {
 				grid-row: if($i == $row-start, $i, $row-start) / span 4;
 
-				.project_image {
+				#{$project}_image {
 					background-image: url(#{image-path("project#{$i}.svg")});
 				}
 			}
 			$row-start: $row-start + $step;
 		}
+
+		&:nth-child(even) {
+			@include breakpoint(breakpoint_m) {
+
+				#{$project}_image {
+					grid-column: span 4 / -1;
+				}
+
+				#{$project}_review {
+					grid-column: span 4 / -2;
+				}
+
+				#{$project}_info {
+					grid-column: 2 / span 2;
+				}
+			}
+		}
 	}
 }
 
-.project {
+#{$project} {
 	display: grid;
 	grid-template-rows: repeat(8, 1fr);
 	grid-template-columns: inherit;
