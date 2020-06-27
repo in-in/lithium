@@ -113,11 +113,11 @@ $project: '.project';
 		z-index: 0;
 		grid-row: 1 / -2;
 		grid-column: 1 / -1;
-		opacity: 12%;
+		opacity: 0.12;
 
 		@include breakpoint(breakpoint_m) {
 			grid-column: 1 / span 4;
-			opacity: 100%;
+			opacity: 1;
 		}
 	}
 

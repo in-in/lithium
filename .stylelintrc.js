@@ -6,7 +6,7 @@ module.exports = {
 		'stylelint-use-nesting',
 	],
 	'rules': {
-		'alpha-value-notation': 'percentage',
+		'alpha-value-notation': 'number',
 		'at-rule-blacklist': null,
 		'at-rule-empty-line-before': [
 			'always',
