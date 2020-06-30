@@ -1,12 +1,16 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const fs = require('fs');
 const Handlebars = require('handlebars');
-const styleDictionary = require('style-dictionary').extend('./.config/sd-config.js');
+const sd = require('style-dictionary');
+const { 'PATHS': { config, templates } } = require('./paths');
 
-const template = Handlebars.compile(fs.readFileSync('./.config/map-nested.hbs')
+const sdExtended = sd.extend(`${config}/sd-config.js`);
+
+const template = Handlebars.compile(fs
+	.readFileSync(`${templates}/map-nested.hbs`)
 	.toString());
 
-styleDictionary.registerFormat({
+sdExtended.registerFormat({
 	'name': 'map-nested',
 	formatter(dictionary) {
 		return template({
@@ -15,4 +19,4 @@ styleDictionary.registerFormat({
 	},
 });
 
-styleDictionary.buildAllPlatforms();
+sdExtended.buildAllPlatforms();

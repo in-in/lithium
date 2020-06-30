@@ -1,4 +1,4 @@
-const { PATHS } = require('./paths');
+const { 'PATHS': { components, styles, templates } } = require('./paths');
 
 const toSnakeCase = (str) => (
 	str.includes('-')
@@ -19,17 +19,17 @@ const config = (plop) => {
 		'actions': [
 			{
 				'type': 'add',
-				'path': `${PATHS.components}/{{ name }}/index.pug`,
-				'templateFile': 'plop-templates/component.pug.hbs',
+				'path': `${components}/{{ name }}/index.pug`,
+				'templateFile': `${templates}/component.pug.hbs`,
 			},
 			{
 				'type': 'add',
-				'path': `${PATHS.components}/{{ name }}/style.scss`,
-				'templateFile': 'plop-templates/component.scss.hbs',
+				'path': `${components}/{{ name }}/style.scss`,
+				'templateFile': `${templates}/component.scss.hbs`,
 			},
 			{
 				'type': 'append',
-				'path': `${PATHS.styles}/styles.scss`,
+				'path': `${styles}/styles.scss`,
 				'separator': '',
 				'template': "@forward '{{ name }}/style';\n",
 			},
