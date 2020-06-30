@@ -78,7 +78,7 @@ $project: '.project';
 				grid-row: if($i == $row-start, $i, $row-start) / span 4;
 
 				#{$project}_image {
-					background-image: url(#{image-path("project#{$i}.svg")});
+					background-image: url(image-path(map-deep($asset, 'image', 'project#{$i}')));
 				}
 			}
 			$row-start: $row-start + $step;
