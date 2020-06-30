@@ -13,7 +13,7 @@
 		gap: inherit;
 		background-position: center;
 		background-repeat: no-repeat;
-		background-image: url(#{image-path($asset_image_hero)});
+		background-image: url(#{image-path(map-deep($asset, 'image', 'hero'))});
 		background-size: cover;
 
 		@include breakpoint(breakpoint_s, '<') {

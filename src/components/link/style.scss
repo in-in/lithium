@@ -9,7 +9,7 @@
 	line-height: $size_line_height_base;
 
 	&_text {
-		border-bottom: em($border_width_base) solid;
+		border-bottom: em($size_border_width_base) solid;
 
 		@include transition(border-color);
 

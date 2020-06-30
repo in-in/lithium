@@ -12,40 +12,115 @@ module.exports = {
 			'transforms': [
 				'attribute/cti',
 				'color/css',
-				'content/quote',
 				'name/cti/snake',
 			],
 			'buildPath': buildPath,
 			'files': [{
-				'destination': 'tokens.scss',
+				'destination': 'color.scss',
 				'format': 'scss/variables',
-				'filter': (token) => {
-					if (!token.path.includes('breakpoint')) {
-						return token;
-					}
-					return false;
-				},
 				'options': { 'showFileHeader': false },
+				'filter': {
+					'attributes': {
+						'category': 'color',
+					},
+				},
+			}, {
+				'destination': 'easing.scss',
+				'format': 'scss/variables',
+				'options': { 'showFileHeader': false },
+				'filter': {
+					'attributes': {
+						'category': 'easing',
+					},
+				},
+			}, {
+				'destination': 'grid.scss',
+				'format': 'scss/variables',
+				'options': { 'showFileHeader': false },
+				'filter': {
+					'attributes': {
+						'category': 'grid',
+					},
+				},
+			}, {
+				'destination': 'shadow.scss',
+				'format': 'scss/variables',
+				'options': { 'showFileHeader': false },
+				'filter': {
+					'attributes': {
+						'category': 'shadow',
+					},
+				},
+			}, {
+				'destination': 'size.scss',
+				'format': 'scss/variables',
+				'options': { 'showFileHeader': false },
+				'filter': {
+					'attributes': {
+						'category': 'size',
+					},
+				},
+			}, {
+				'destination': 'spacing.scss',
+				'format': 'scss/variables',
+				'options': { 'showFileHeader': false },
+				'filter': {
+					'attributes': {
+						'category': 'spacing',
+					},
+				},
+			}, {
+				'destination': 'time.scss',
+				'format': 'scss/variables',
+				'options': { 'showFileHeader': false },
+				'filter': {
+					'attributes': {
+						'category': 'time',
+					},
+				},
+			}, {
+				'destination': 'typography.scss',
+				'format': 'scss/variables',
+				'options': { 'showFileHeader': false },
+				'filter': {
+					'attributes': {
+						'category': 'typography',
+					},
+				},
 			}],
 		},
 		'scss-map': {
 			'transforms': [
 				'attribute/cti',
-				'color/css',
 				'name/cti/snake',
-				'size/px',
 			],
 			'buildPath': buildPath,
 			'files': [{
 				'destination': 'breakpoint.scss',
 				'format': 'scss/map-flat',
+				'mapName': 'breakpoints',
+				'options': { 'showFileHeader': false },
 				'filter': {
 					'attributes': {
 						'category': 'breakpoint',
 					},
 				},
-				'mapName': 'breakpoints',
-				'options': { 'showFileHeader': false },
+			}],
+		},
+		'scss-map-deep': {
+			'transforms': [
+				'attribute/cti',
+				'name/cti/snake',
+			],
+			'buildPath': buildPath,
+			'files': [{
+				'destination': 'asset.scss',
+				'format': 'map-nested',
+				'filter': {
+					'attributes': {
+						'category': 'asset',
+					},
+				},
 			}],
 		},
 		'js': {
@@ -61,7 +136,6 @@ module.exports = {
 			}],
 		},
 		'json': {
-			'transformGroup': 'web',
 			'transforms': [
 				'name/cti/camel',
 			],

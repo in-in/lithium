@@ -1,16 +1,18 @@
 {
-	"border": {
-		"width": {
-			"base": {
-				"value": 1
+	"size": {
+		"border": {
+			"width": {
+				"base": {
+					"value": 1
+				},
+				"normal": {
+					"value": 8
+				}
 			},
-			"normal": {
-				"value": 8
-			}
-		},
-		"radius": {
-			"circle": {
-				"value": "50%"
+			"radius": {
+				"circle": {
+					"value": "50%"
+				}
 			}
 		}
 	}

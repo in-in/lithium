@@ -5,10 +5,8 @@
 		"build": "NODE_ENV=production webpack --config .config/webpack.prod.js",
 		"dev": "NODE_ENV=development webpack --config .config/webpack.dev.js",
 		"gen": "plop --plopfile .config/plopfile.js",
-		"tokens:clean": "style-dictionary clean -c ./.config/sd-config.js",
-		"tokens:build": "style-dictionary build -c ./.config/sd-config.js",
-		"tokens": "run-s tokens:clean tokens:build",
-		"start": "NODE_ENV=development webpack-dev-server --config .config/webpack.dev.js"
+		"start": "NODE_ENV=development webpack-dev-server --config .config/webpack.dev.js",
+		"tokens": "node ./.config/sd-build.js"
 	},
 	"browserslist": [
 		"last 2 versions and > 1%",
@@ -25,8 +23,9 @@
 		"csso-webpack-plugin": "2.0.0-beta.1",
 		"eslint": "7.3.1",
 		"eslint-config-airbnb-base": "14.2.0",
-		"eslint-plugin-import": "2.21.2",
+		"eslint-plugin-import": "2.22.0",
 		"file-loader": "6.0.0",
+		"handlebars": "4.7.6",
 		"html-webpack-inline-svg-plugin": "2.2.6",
 		"html-webpack-plugin": "4.3.0",
 		"image-webpack-loader": "6.0.0",
@@ -35,7 +34,7 @@
 		"plop": "2.7.1",
 		"postcss-loader": "3.0.0",
 		"postcss-media-minmax": "4.0.0",
-		"postcss-modules": "3.1.0",
+		"postcss-modules": "3.2.0",
 		"postcss-normalize": "9.0.0",
 		"postcss-sort-media-queries": "1.31.21",
 		"pug": "3.0.0",

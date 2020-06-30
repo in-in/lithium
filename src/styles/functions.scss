@@ -3,7 +3,14 @@
 @use 'sass:meta';
 @use 'sass:string';
 @use 'tokens' as *;
-@use 'breakpoint' as *;
+
+@function map-deep($map, $keys...) {
+	@each $key in $keys {
+		$map: map.get($map, $key);
+	}
+
+	@return $map;
+}
 
 @function compose($classname) {
 	@return string.slice(#{$classname}, 2);
@@ -63,7 +70,7 @@
 	@return calc(#{$size} / (#{$ratio}));
 }
 
-@function image-path($name, $path: $asset_image_dir) {
+@function image-path($name, $path: map-deep($asset, 'image', 'dir')) {
 	@return $path + $name;
 }
 

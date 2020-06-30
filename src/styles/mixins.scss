@@ -3,7 +3,6 @@
 @use 'sass:color';
 @use 'functions' as *;
 @use 'tokens' as *;
-@use 'breakpoint' as *;
 
 @mixin breakpoint($size, $operator: '>=') {
 	@if map.get($breakpoints, $size) {
@@ -25,7 +24,11 @@
 		font-style: $style;
 		font-display: swap;
 		src:
-			url(string.quote($asset_font_path + $filename + "." + $ext))
+			url(
+				string.quote(
+					map-deep(
+						$asset, "font", "path"
+					) + $filename + '.' + $ext))
 			format(string.quote($ext));
 	}
 }

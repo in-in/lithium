@@ -5,7 +5,7 @@
 
 	z-index: 10;
 	padding: em($spacing_110);
-	border-radius: em($border_width_normal);
+	border-radius: em($size_border_width_normal);
 	box-shadow: compose-shadow($shadow_review);
 
 	&__large {
@@ -37,7 +37,7 @@
 
 		IMG {
 			width: 100%;
-			border-radius: $border_radius_circle;
+			border-radius: $size_border_radius_circle;
 		}
 	}
 

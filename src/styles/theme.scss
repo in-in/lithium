@@ -11,7 +11,11 @@
 BODY {
 	background-color: $color_base_husky;
 	color: $color_base_forest;
-	font-family: $asset_font_main_woff_2, sans-serif;
+	font-family:
+		map-deep(
+			$asset, 'font', 'main', 'woff2'
+		),
+		sans-serif;
 	font-size: locks(14, 18);
 }
 
