@@ -139,3 +139,36 @@
 		@content;
 	}
 }
+
+@mixin separator($top: true, $bottom: true) {
+	position: relative;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		grid-column: #{$grid_full};
+		width: 100%;
+		height: em($size_separator, 14);
+		background-color: color.scale($color_base_forest, $alpha: -90%);
+
+		@include breakpoint(breakpoint_s, '<') {
+			@include container();
+		}
+
+		@include breakpoint(breakpoint_s) {
+			grid-column: 2 / -2;
+		}
+	}
+
+	&::before {
+		top: 0;
+		display: if($top, null, none);
+	}
+
+	&::after {
+		bottom: 0;
+		display: if($bottom, null, none);
+	}
+}

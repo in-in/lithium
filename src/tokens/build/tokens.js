@@ -43,6 +43,7 @@ export const sizeFontMsD1 = "0.8";
 export const sizeFontMsD2 = "0.64";
 export const sizeLineHeightBase = "1";
 export const sizeLineHeightNormal = "1.65";
+export const sizeSeparator = "1";
 export const spacing0 = "0";
 export const spacing40 = "4";
 export const spacing60 = "8";
