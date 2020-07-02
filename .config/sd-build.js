@@ -101,23 +101,13 @@ const sdConfig = {
 			'buildPath': buildPath,
 			'files': [{
 				'destination': 'breakpoint.scss',
-				'format': 'scss/map-flat',
-				'mapName': 'breakpoints',
-				'options': { 'showFileHeader': false },
+				'format': 'map-nested',
 				'filter': {
 					'attributes': {
 						'category': 'breakpoint',
 					},
 				},
-			}],
-		},
-		'scss-map-deep': {
-			'transforms': [
-				'attribute/cti',
-				'name/cti/snake',
-			],
-			'buildPath': buildPath,
-			'files': [{
+			}, {
 				'destination': 'asset.scss',
 				'format': 'map-nested',
 				'filter': {

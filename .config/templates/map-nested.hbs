@@ -1,13 +1,13 @@
 {{#*inline "key"}}
+{{#if this.value}}
+'{{@key}}': '{{this.value}}',
+{{else}}
 '{{@key}}': (
 	{{#each this}}
-	{{#if this.value}}
-	'{{@key}}': '{{this.value}}',
-	{{else}}
 	{{> key}}
-	{{/if}}
 	{{/each}}
 ),
+{{/if}}
 {{/inline}}
 
 {{~#if properties}}
