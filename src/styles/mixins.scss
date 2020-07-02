@@ -150,7 +150,7 @@
 		left: 0;
 		grid-column: #{$grid_full};
 		width: 100%;
-		height: em($size_separator, 14);
+		height: em($size_separator, $size_font_min);
 		background-color: color.scale($color_base_forest, $alpha: -90%);
 
 		@include breakpoint(breakpoint_s, '<') {
