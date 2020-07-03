@@ -32,7 +32,11 @@ const style = {
 			'options': {
 				'sourceMap': true,
 				'sassOptions': {
-					'includePaths': [PATHS.components, path.join(PATHS.tokens, 'build')],
+					'includePaths': [
+						PATHS.components,
+						PATHS.styles,
+						path.join(PATHS.tokens, 'build'),
+					],
 				},
 			},
 		},
