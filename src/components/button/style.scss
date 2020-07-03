@@ -5,19 +5,19 @@
 	color: #dc143c;
 	text-transform: uppercase;
 
-	@include breakpoint(breakpoint_s) {
+	@include breakpoint(s) {
 		background-color: #0ff;
 	}
 
-	@include breakpoint(breakpoint_m) {
+	@include breakpoint(m) {
 		background-color: #8a2be2;
 	}
 
-	@include breakpoint(breakpoint_l) {
+	@include breakpoint(l) {
 		background-color: #d2691e;
 	}
 
-	@include breakpoint(breakpoint_xl) {
+	@include breakpoint(xl) {
 		background-color: #d2691e;
 	}
 }

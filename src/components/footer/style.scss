@@ -4,22 +4,21 @@
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
-	// height: 800px;
 	background-color: rgb(237 20 61 / 0.7);
 
-	@include breakpoint(breakpoint_s) {
+	@include breakpoint(s) {
 		background-color: #f5f5dc;
 	}
 
-	@include breakpoint(breakpoint_m) {
+	@include breakpoint(m) {
 		background-color: #a52a2a;
 	}
 
-	@include breakpoint(breakpoint_l) {
+	@include breakpoint(l) {
 		background-color: #7fff00;
 	}
 
-	@include breakpoint(breakpoint_xl) {
+	@include breakpoint(xl) {
 		background-color: rgb(237 20 61 / 0.7);
 	}
 

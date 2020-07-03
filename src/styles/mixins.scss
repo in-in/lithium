@@ -5,8 +5,8 @@
 @use 'tokens' as *;
 
 @mixin breakpoint($size, $operator: '>=') {
-	@if map.get($breakpoints, $size) {
-		@media (width $operator map.get($breakpoints, $size) + px) {
+	@if map.get($breakpoint, $size) {
+		@media (width $operator map.get($breakpoint, $size) + px) {
 			@content;
 		}
 	}
@@ -108,8 +108,8 @@
 }
 
 @mixin container($show: true) {
-	padding-right: if($show, t2c(16, breakpoint_xs), 0);
-	padding-left: if($show, t2c(16, breakpoint_xs), 0);
+	padding-right: if($show, t2c(16, xs), 0);
+	padding-left: if($show, t2c(16, xs), 0);
 }
 
 @mixin bg_resolution($data) {
@@ -153,11 +153,11 @@
 		height: em($size_separator, $size_font_min);
 		background-color: color.scale($color_base_forest, $alpha: -90%);
 
-		@include breakpoint(breakpoint_s, '<') {
+		@include breakpoint(s, '<') {
 			@include container();
 		}
 
-		@include breakpoint(breakpoint_s) {
+		@include breakpoint(s) {
 			grid-column: 2 / -2;
 		}
 	}

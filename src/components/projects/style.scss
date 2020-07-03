@@ -20,15 +20,15 @@ $project: '.project';
 			margin-bottom: em($spacing_80);
 		}
 
-		@include breakpoint(breakpoint_m, '<') {
+		@include breakpoint(m, '<') {
 			@include container();
 		}
 
-		@include breakpoint(breakpoint_s) {
+		@include breakpoint(s) {
 			grid-column: 2 / -2;
 		}
 
-		@include breakpoint(breakpoint_m) {
+		@include breakpoint(m) {
 			grid-template-rows: 1fr;
 			grid-row: 1 / 2;
 
@@ -42,7 +42,7 @@ $project: '.project';
 		grid-row: 1 / 2;
 		grid-column: #{$grid_full};
 
-		@include breakpoint(breakpoint_m) {
+		@include breakpoint(m) {
 			grid-row: 1 / 1;
 			grid-column: 1 / span 3;
 		}
@@ -52,7 +52,7 @@ $project: '.project';
 		grid-row: 2 / -1;
 		grid-column: #{$grid_full};
 
-		@include breakpoint(breakpoint_m) {
+		@include breakpoint(m) {
 			grid-row: 1 / 1;
 			grid-column: 4 / span 3;
 		}
@@ -85,7 +85,7 @@ $project: '.project';
 		}
 
 		&:nth-child(even) {
-			@include breakpoint(breakpoint_m) {
+			@include breakpoint(m) {
 
 				#{$project}_image {
 					grid-column: span 4 / -1;
@@ -115,7 +115,7 @@ $project: '.project';
 		grid-column: 1 / -1;
 		opacity: 0.12;
 
-		@include breakpoint(breakpoint_m) {
+		@include breakpoint(m) {
 			grid-column: 1 / span 4;
 			opacity: 1;
 		}
@@ -127,12 +127,12 @@ $project: '.project';
 		grid-column: 1 / -2;
 		background-color: $color_base_husky;
 
-		@include breakpoint(breakpoint_s) {
+		@include breakpoint(s) {
 			grid-row: 6 / -1;
 			grid-column: 2 / -2;
 		}
 
-		@include breakpoint(breakpoint_m) {
+		@include breakpoint(m) {
 			grid-row: 5 / -1;
 			grid-column: 2 / span 4;
 		}
@@ -148,7 +148,7 @@ $project: '.project';
 			margin-bottom: em($spacing_100);
 		}
 
-		@include breakpoint(breakpoint_m) {
+		@include breakpoint(m) {
 			grid-row: 1 / -2;
 			grid-column: span 2 / -2;
 		}

@@ -16,7 +16,7 @@
 		height: 100%;
 		padding: em($spacing_60);
 
-		@include breakpoint(breakpoint_m) {
+		@include breakpoint(m) {
 			padding: em($spacing_100);
 		}
 	}

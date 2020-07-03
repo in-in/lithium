@@ -15,7 +15,7 @@ $root: null !default;
 	background-image: url(#{image-path(map-deep($asset, 'image', 'hero'))});
 	background-size: cover;
 
-	@include breakpoint(breakpoint_s, '<') {
+	@include breakpoint(s, '<') {
 		@include container();
 	}
 
@@ -23,11 +23,11 @@ $root: null !default;
 		grid-row: 2 / span 3;
 		grid-column: #{$grid_full};
 
-		@include breakpoint(breakpoint_s) {
+		@include breakpoint(s) {
 			grid-column: 2 / -2;
 		}
 
-		@include breakpoint(breakpoint_m) {
+		@include breakpoint(m) {
 			grid-column: 2 / span 3;
 		}
 	}
