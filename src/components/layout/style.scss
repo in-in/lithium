@@ -11,7 +11,7 @@
 		grid-column: #{$grid_full};
 
 		@include breakpoint(s) {
-			grid-column: 2 / -2;
+			grid-column: #{$grid_inner};
 		}
 
 		@include breakpoint(s, '<') {

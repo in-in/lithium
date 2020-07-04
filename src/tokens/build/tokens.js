@@ -28,6 +28,7 @@ export const colorFontBase = "#004842";
 export const colorFontLight = "#e2eff9";
 export const easingBase = "ease-in-out";
 export const gridFull = "'1 / -1'";
+export const gridInner = "'2 / -2'";
 export const shadowReview = "50px 50px 100px";
 export const shadowAvatar = "20px 25px 40px";
 export const sizeBorderWidthBase = 1;
