@@ -20,4 +20,4 @@ mixin picture(src, alt)
 			+source(src, 'png')
 		img(
 			src= getPath(`${getName(src)}@1x${getExt(src)}`)
-			alt=alt)
+			alt=alt + '.')
