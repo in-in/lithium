@@ -4,7 +4,7 @@ include ../text/index.pug
 
 mixin hero()
 	div(class=s.hero)&attributes(attributes)
-		+text(data.hero.subheading, 'light')
-		+heading(data.hero.heading, 'h1', 'h1')(
+		+text(d.hero.subheading, 'light')
+		+heading(d.hero.heading, 'h1', 'h1')(
 				class=s.text__light)
 		+link('Get in touch', '#0')
