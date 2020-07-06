@@ -1,5 +1,6 @@
 include ../about/index.pug
 include ../aside/index.pug
+include ../features/index.pug
 include ../hero/index.pug
 include ../partners/index.pug
 include ../projects/index.pug
@@ -17,5 +18,6 @@ mixin main()
 			+partners(d.partners)
 		+section()(class=s.section__projects)
 			+projects(d.projects.list)(class=s.section_inner)
-		+section('Features')(class=s.section__features)
+		+section()(class=s.section__features)
+			+features(d.features.list)(class=cx(s.section_inner))
 		block

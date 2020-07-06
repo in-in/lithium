@@ -4,12 +4,8 @@ $root: '.section';
 @use 'style_hero' with ($root: $root);
 @use 'style_about' with ($root: $root);
 @use 'style_projects' with ($root: $root);
+@use 'style_features' with ($root: $root);
 
 #{$root} {
 	grid-column: #{$grid_full};
-
-	&__features {
-		grid-row: 31 / span 5;
-		background-color: #800057;
-	}
 }
