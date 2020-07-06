@@ -56,7 +56,7 @@
 	background-image:
 		radial-gradient(
 			circle,
-			$crystal calc(1% - 1px),
+			$color_base_crystall calc(1% - 1px),
 			color.scale($color, $lightness: -50%) 1%
 		);
 	background-size: 15000%;
@@ -64,7 +64,7 @@
 	transition-duration: calc(var(--transition_duration) / 2);
 
 	&:active {
-		background-color: $crystal;
+		background-color: $color_base_crystal;
 		background-size: 100%;
 		color: color.scale($color, $lightness: 80%);
 		transition-property: background-size;
@@ -76,7 +76,7 @@
 	$lh: $size_line_height_normal,
 	$unit: 1em,
 	$breakpoint: 4,
-	$color-bg: $white,
+	$color-bg: $color_base_white,
 	$min-height: false
 ) {
 	$height: calc((#{$breakpoint} * #{$lh}) * #{$unit});
@@ -94,10 +94,15 @@
 		right: 0;
 		bottom: 0;
 		z-index: 10;
-		width: calc((#{$lh} * #{$unit}) + 3ch);
+		width: calc((#{$lh} * #{$unit}) + 2ch);
 		height: calc(((((#{$breakpoint} - 1) * #{$lh}) * #{$unit}) - 100%) * -1000);
 		max-height: calc(#{$lh} * #{$unit});
-		background-image: linear-gradient(to right, $crystal, $color-bg 50%);
+		background-image:
+			linear-gradient(
+				to right,
+				color.scale($color-bg, $alpha: -100%),
+				$color-bg 50%
+			);
 	}
 }
 

@@ -41,6 +41,9 @@
 			},
 			"normal": {
 				"value": "1.65"
+			},
+			"heading": {
+				"value": "{size.font.ms-u1.value}"
 			}
 		}
 	}
