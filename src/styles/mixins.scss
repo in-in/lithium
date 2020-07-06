@@ -113,8 +113,8 @@
 }
 
 @mixin container($show: true) {
-	padding-right: if($show, t2c(16, xs), 0);
-	padding-left: if($show, t2c(16, xs), 0);
+	padding-inline-start: if($show, t2c($spacing_gutter, xs), 0);
+	padding-inline-end: if($show, t2c($spacing_gutter, xs), 0);
 }
 
 @mixin bg_resolution($data) {
@@ -145,7 +145,7 @@
 	}
 }
 
-@mixin separator($top: true, $bottom: true) {
+@mixin separator($top: true, $bottom: true, $gutter: false) {
 	position: relative;
 
 	&::before,
@@ -159,7 +159,9 @@
 		background-color: color.scale($color_base_forest, $alpha: -90%);
 
 		@include breakpoint(s, '<') {
-			@include container();
+			right: if($gutter, t2c($spacing_gutter, xs), 0);
+			left: if($gutter, t2c($spacing_gutter, xs), 0);
+			width: if($gutter, calc(100% - #{t2c($spacing_gutter * 2, xs)}), 100%);
 		}
 
 		@include breakpoint(s) {

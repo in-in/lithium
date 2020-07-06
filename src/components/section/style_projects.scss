@@ -11,7 +11,7 @@ $root: null !default;
 	grid-row: 13 / span var(--row);
 	gap: inherit;
 
-	@include separator($top: false);
+	@include separator($top: false, $gutter: true);
 
 	#{$root}_inner {
 		grid-row: 2 / span 16;
