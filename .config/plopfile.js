@@ -13,7 +13,7 @@ const config = (plop) => {
 				'type': 'input',
 				'name': 'name',
 				'message': 'What is your component name?',
-				'filter': (input) => toSnakeCase(input).toLowerCase(),
+				'filter': (input) => toSnakeCase(input),
 			},
 		],
 		'actions': [

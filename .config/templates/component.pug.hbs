@@ -1,4 +1,4 @@
-mixin {{ name }}(str='{{ name }}')
+mixin {{ name }}()
 	div(class=s.{{ name }})&attributes(attributes)
-		p= `${str} component`
+		p {{ name }}
 		block
