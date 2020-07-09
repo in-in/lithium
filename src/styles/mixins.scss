@@ -77,8 +77,7 @@
 	$unit: 1em,
 	$breakpoint: 4,
 	$color-bg: $color_base_white,
-	$min-height: false
-) {
+	$min-height: false) {
 	$height: calc((#{$breakpoint} * #{$lh}) * #{$unit});
 
 	position: relative;
@@ -145,7 +144,11 @@
 	}
 }
 
-@mixin separator($top: true, $bottom: true, $gutter: false) {
+@mixin separator(
+	$top: true,
+	$bottom: true,
+	$gutter: false,
+	$color: color.scale($color_base_forest, $alpha: -90%)) {
 	position: relative;
 
 	&::before,
@@ -156,7 +159,7 @@
 		grid-column: #{$grid_full};
 		width: 100%;
 		height: em($size_separator, $size_font_min);
-		background-color: color.scale($color_base_forest, $alpha: -90%);
+		background-color: $color;
 
 		@include breakpoint(s, '<') {
 			right: if($gutter, t2c($spacing_gutter, xs), 0);
