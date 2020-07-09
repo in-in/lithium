@@ -6,19 +6,21 @@
 	color: $color_base_schnipo;
 	font-size: $size_font_ms_0 + em;
 	font-weight: $typography_weight_links;
-	line-height: $size_line_height_base;
+	line-height: $size_line_height_normal;
 
 	&_text {
-		border-bottom: em($size_border_width_base) solid;
+		text-decoration: underline;
 
-		@include transition(border-color);
+		@include transition(text-decoration-color);
 
 		@include hover() {
-			border-color: $color_base_crystal;
+			text-decoration-color: $color_base_crystal;
 		}
 	}
 
-	@include triangle(0.25em) {
-		margin-inline-end: 0.25em;
+	&__icon {
+		@include triangle(0.25em) {
+			margin-inline-end: 0.25em;
+		}
 	}
 }

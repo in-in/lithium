@@ -1,6 +1,6 @@
-mixin link(str, href='#')
+mixin link(str, href='#', icon=true)
 	a(
 		href= href
-		class=s.link
+		class=cx(s.link, { [s.link__icon]: icon })
 		)&attributes(attributes)
 		span(class=s.link_text)= str
