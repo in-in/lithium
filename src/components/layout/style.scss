@@ -2,7 +2,7 @@
 
 .layout {
 	display: grid;
-	grid-template-rows: repeat(44, rem(120));
+	grid-template-rows: repeat(37, rem(120)) repeat(7, min-content);
 	grid-template-columns: repeat(8, 1fr);
 	gap: t2c(16, xl);
 
