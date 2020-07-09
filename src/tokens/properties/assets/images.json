@@ -7,6 +7,9 @@
 			"hero": {
 				"value": "hero.svg"
 			},
+			"footer": {
+				"value": "footer.svg"
+			},
 			"project1": {
 				"value": "project1.svg"
 			},

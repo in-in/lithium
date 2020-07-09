@@ -10,6 +10,7 @@ export const assetIconPartners5 = "linkedin.svg";
 export const assetIconPartners6 = "mastercard.svg";
 export const assetImageDir = "../assets/images/";
 export const assetImageHero = "hero.svg";
+export const assetImageFooter = "footer.svg";
 export const assetImageProject1 = "project1.svg";
 export const assetImageProject2 = "project2.svg";
 export const assetImageProject3 = "project3.svg";
