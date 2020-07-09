@@ -1,0 +1,13 @@
+include ../heading/index.pug
+include ../link/index.pug
+
+mixin headingList(list)
+	- let {title, data} = list;
+	figure(class=s.headingList)&attributes(attributes)
+		figcaption(class=s.headingList_caption)
+			+heading(title, 'h3', 'h5')(class=s.headingList_title)= title
+		ul(class=s.headingList_items)
+			each item in data
+				- let {name, value} = item;
+				li(class=s.headingList_item)
+					+link(name, value, icon=false)(class=s.headingList_link)

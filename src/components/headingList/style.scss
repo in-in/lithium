@@ -1,0 +1,21 @@
+@use 'config' as *;
+
+.headingList {
+	// background-color: plum;
+
+	&_caption {
+		margin-block-end: em($spacing_100);
+	}
+
+	&_title {
+		text-transform: uppercase;
+	}
+
+	&_items {
+		// background-color: pink;
+	}
+
+	&_item {
+		// background-color: orangered;
+	}
+}

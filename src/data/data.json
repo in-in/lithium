@@ -115,5 +115,103 @@
 				"link": "#"
 			}
 		]
+	},
+	"contacts": {
+		"phone": {
+			"title": "Phone",
+			"data": [
+				{
+					"name": "+32 50 31 28 32",
+					"value": "+32 50 31 28 32"
+				}
+			]
+		},
+		"email": {
+			"title": "Get in Touch",
+			"data": [
+				{
+					"name": "info@lithium.com",
+					"value": "info@lithium.com"
+				}
+			]
+		},
+		"address": {
+			"title": "Address",
+			"data": [
+				{
+					"name": "491 Merlin Crest Suite 963",
+					"value": ""
+				}
+			]
+		}
+	},
+	"links": {
+		"services": {
+			"title": "Services",
+			"data": [
+				{
+					"name": "Strategy Design",
+					"value": "#"
+				},
+				{
+					"name": "Product Design",
+					"value": "#"
+				},
+				{
+					"name": "Content Strategy",
+					"value": "#"
+				},
+				{
+					"name": "Brand Strategy",
+					"value": "#"
+				},
+				{
+					"name": "Development",
+					"value": "#"
+				}
+			]
+		},
+		"help": {
+			"title": "Help And Advice",
+			"data": [
+				{
+					"name": "How it works",
+					"value": "#"
+				},
+				{
+					"name": "Contact Support",
+					"value": "#"
+				},
+				{
+					"name": "Privacy Policy",
+					"value": "#"
+				},
+				{
+					"name": "FAQ",
+					"value": "#"
+				}
+			]
+		},
+		"company": {
+			"title": "Company",
+			"data": [
+				{
+					"name": "About",
+					"value": "#"
+				},
+				{
+					"name": "Blog",
+					"value": "#"
+				},
+				{
+					"name": "Contact",
+					"value": "#"
+				},
+				{
+					"name": "Jobs",
+					"value": "#"
+				}
+			]
+		}
 	}
 }
