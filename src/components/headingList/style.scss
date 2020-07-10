@@ -1,8 +1,6 @@
 @use 'config' as *;
 
 .headingList {
-	// background-color: plum;
-
 	&_caption {
 		margin-block-end: em($spacing_100);
 	}
@@ -11,11 +9,8 @@
 		text-transform: uppercase;
 	}
 
-	&_items {
-		// background-color: pink;
-	}
-
 	&_item {
-		// background-color: orangered;
+		padding-top: em($spacing_60);
+		padding-bottom: em($spacing_60);
 	}
 }
