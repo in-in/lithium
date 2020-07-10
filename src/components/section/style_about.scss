@@ -11,7 +11,7 @@ $root: null !default;
 	grid-row: 7 / span var(--row);
 	gap: inherit;
 
-	@include separator($top: false);
+	@include separator($top: false, $inner: true);
 
 	@include breakpoint(s, '<') {
 		@include container();

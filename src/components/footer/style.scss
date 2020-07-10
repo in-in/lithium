@@ -2,9 +2,7 @@
 
 .footer {
 	display: grid;
-	// grid-template-rows: repeat(7, 1fr);
 	grid-template-rows: repeat(2, rem(120)) repeat(5, min-content);
-	// grid-template-rows: repeat(2, 1fr) repeat(5, minmax(1fr, min-content));
 	grid-template-columns: inherit;
 	gap: inherit;
 	background-color: $color_base_forest;
@@ -14,7 +12,6 @@
 
 	&_inner {
 		display: grid;
-		// grid-template-rows: repeat(5, 1fr);
 		grid-template-rows: repeat(5, min-content);
 		grid-template-columns: repeat(6, 1fr);
 		grid-row: 3 / -1;
@@ -49,7 +46,7 @@
 	&_links {
 		grid-row: 3 / span 2;
 
-		@include separator($top: false, $gutter: true, $color: $color_base_husky);
+		@include separator($top: false, $color: $color_base_husky);
 	}
 
 	&_copy {

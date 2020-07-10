@@ -148,6 +148,7 @@
 	$top: true,
 	$bottom: true,
 	$gutter: false,
+	$inner: false,
 	$color: color.scale($color_base_forest, $alpha: -90%)) {
 	position: relative;
 
@@ -168,7 +169,7 @@
 		}
 
 		@include breakpoint(s) {
-			grid-column: #{$grid_inner};
+			grid-column: if($inner, #{$grid_inner}, null);
 		}
 	}
 
