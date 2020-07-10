@@ -41,8 +41,8 @@
 		"pug-lint": "2.6.0",
 		"pug-loader": "2.4.0",
 		"sass": "1.26.10",
-		"sass-loader": "9.0.1",
-		"style-dictionary": "2.10.0",
+		"sass-loader": "9.0.2",
+		"style-dictionary": "2.10.1",
 		"style-loader": "1.2.1",
 		"stylelint": "13.6.1",
 		"stylelint-a11y": "1.2.3",
@@ -53,6 +53,6 @@
 		"webpack": "4.43.0",
 		"webpack-cli": "3.3.12",
 		"webpack-dev-server": "3.11.0",
-		"webpack-merge": "5.0.8"
+		"webpack-merge": "5.0.9"
 	}
 }
