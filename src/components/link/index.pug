@@ -2,5 +2,6 @@ mixin link(str, href='#', icon=true)
 	a(
 		href= href
 		class=cx(s.link, { [s.link__icon]: icon })
+		target='_blank'
 		)&attributes(attributes)
 		span(class=s.link_text)= str
