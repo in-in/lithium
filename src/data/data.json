@@ -122,7 +122,7 @@
 			"data": [
 				{
 					"name": "+32 50 31 28 32",
-					"value": "+32 50 31 28 32"
+					"value": "tel:+3250312832"
 				}
 			]
 		},
@@ -131,7 +131,7 @@
 			"data": [
 				{
 					"name": "info@lithium.com",
-					"value": "info@lithium.com"
+					"value": "mailto:info@lithium.com"
 				}
 			]
 		},
@@ -139,8 +139,8 @@
 			"title": "Address",
 			"data": [
 				{
-					"name": "491 Merlin Crest Suite 963",
-					"value": ""
+					"name": "1 Apple Park Way",
+					"value": "https://osm.org/go/TZML4YVXM-?m="
 				}
 			]
 		}
