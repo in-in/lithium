@@ -1,4 +1,5 @@
+@use 'config' as *;
+
 .copy {
-	background-color: #c0c0c0;
-	text-transform: uppercase;
+	font-size: $size_font_ms_0 + em;
 }

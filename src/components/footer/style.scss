@@ -50,6 +50,10 @@
 	}
 
 	&_copy {
+		display: flex;
 		grid-row: span 1 / -1;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
 	}
 }
