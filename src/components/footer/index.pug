@@ -1,6 +1,7 @@
 include ../copy/index.pug
 include ../headingList/index.pug
 include ../logo/index.pug
+include ../social/index.pug
 
 mixin footer()
 	footer(class=s.footer)&attributes(attributes)
@@ -9,6 +10,7 @@ mixin footer()
 				+headingList(d.contacts.phone)
 				+headingList(d.contacts.email)
 				+headingList(d.contacts.address)
+				+social()(class=s.footer_social)
 			div(class=cx(s.footer_item, s.footer_links))
 				+headingList(d.links.services)
 				+headingList(d.links.help)

@@ -30,7 +30,7 @@
 	&_item {
 		display: grid;
 		grid-template-rows: repeat(2, min-content);
-		grid-template-columns: repeat(auto-fit, minmax(em(200), 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(em(220), auto));
 		grid-column: #{$grid_full};
 		gap: em($spacing_110);
 		padding-top: em($spacing_120);
@@ -55,5 +55,9 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
+	}
+
+	&_social {
+		align-self: end;
 	}
 }
