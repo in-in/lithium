@@ -2,7 +2,7 @@
 
 .footer {
 	display: grid;
-	grid-template-rows: repeat(2, rem(120)) repeat(5, min-content);
+	grid-template-rows: repeat(2, rem($grid_row)) repeat(5, min-content);
 	grid-template-columns: inherit;
 	gap: inherit;
 	background-color: $color_base_forest;
