@@ -3,5 +3,5 @@ include ../link/index.pug
 
 mixin slogan()
 	div(class=s.slogan)&attributes(attributes)
-		+heading('Let’s make something amazing together', 'p', 'h1')
+		+heading({text: 'Let’s make something amazing together', modifier: 'h1'})
 		+link("Let's get started")
