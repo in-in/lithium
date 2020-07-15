@@ -1,38 +1,38 @@
 {
 	"hero": {
-		"heading": "A creative agency for redemptive brands",
-		"subheading": "A place where"
+		"heading": "Making creative ideas all over the world",
+		"subheading": "Imagine a future"
 	},
 	"about": {
-		"heading": "Strategy. Design  Content. Technology Development",
-		"subheading": "What we do for you",
-		"description": "There’s no secret sauce, no wizard behind the curtain. What makes Aerolab tick is an interdisciplinary team with a framework that fosters candid collaboration."
+		"heading": "Creative. Design Essence. Innovation",
+		"subheading": "We provide results",
+		"description": "Our view and approach to work allow us to achieve effective business results, balancing the combination of professional marketing tools and agency capabilities."
 	},
 	"review": [
 		{
-			"quote": "With More than 10 Years of Knowledge and Expertise we Design and Code Websites and Apps, We Build Brands and Help Them Succeed",
+			"quote": "They try to make sure that they completely understand what we want, and clients should take full advantage of it",
 			"avatar": "review_1.png",
-			"name": "Genevieve Rodriquez",
-			"company": "Founder & CEO, Webovio",
+			"name": "Gabrielle Correia",
+			"company": "CEO, Jewel Mart",
 			"mod": "large"
 		},
 		{
-			"quote": "In my history of working with trade show vendors, I can honestly say that there is not one company that I've ever worked with that has better service than Exhibit Systems.",
+			"quote": "They' ve done a brilliant job on all the projects we've worked on with them. The most impressive thing about the team is their desire to fulfill and please their client",
 			"avatar": "review_2.png",
-			"name": "Angel Armstrong",
-			"company": "Founder & CEO, Google"
+			"name": "Paula Fraser",
+			"company": "COO, UniCo Group"
 		},
 		{
-			"quote": "I know they are going to be honest with me. I am not going to get a subpar product; I know it is going to be good. That is the number one advantage of working with Exhibit Systems.",
+			"quote": "They know how to report in advance what the steps are and what happens to the time scale provided. UX researchers were very proactive, responsive and motivated",
 			"avatar": "review_3.png",
-			"name": "Lina Hart",
-			"company": "Founder & CEO, Jico"
+			"name": "Alicia Stuart",
+			"company": "Marketing Manager, Verida"
 		},
 		{
-			"quote": "Exhibit Systems is not a provider. They are not a supplier. They are a partner with expertise in making trade shows effective.",
+			"quote": "I was definitely struck by how well they learned about my industry and competitors. I love that their team made sure we achieved our common goals",
 			"avatar": "review_4.png",
-			"name": "Eunice Oliver",
-			"company": "Founder & CEO, Zeem"
+			"name": "Francesca Wilson",
+			"company": "Co-Founder, Tuo"
 		}
 	],
 	"partners": [
@@ -68,50 +68,50 @@
 		}
 	],
 	"projects": {
-		"heading": "We Have Some Awesome Project",
-		"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the",
+		"heading": "Here are results of our work",
+		"description": "Over the years, we have had a wonderful opportunity to work with such brands to create and enhance their digital products and services",
 		"list": [
 			{
-				"title": "The wall new Balenciaga.com",
-				"description": "Dvd printing is an important feature used by large and small DVD production houses to print information on DVDs.",
+				"title": "Customer Service Center App",
+				"description": "Lithium and UniCo stakeholders clarified all points of contact before Lithium started creating the application visual design environment",
 				"link": "#",
 				"image": "assetIconProject1"
 			},
 			{
-				"title": "Is this the future of 3D model?",
-				"description": "While it was just a TV show, that little speech at the beginning of the original Star Trek show really did do a good job of capturing our feelings about space.",
+				"title": "Deliver more than a basic mobile app",
+				"description": "Our teams worked closely together to integrate mobile app created using RN with Verida cloud API services. The app was to make data security a priority",
 				"link": "#",
 				"image": "assetIconProject2"
 			},
 			{
-				"title": " Is this the future of Online Booking",
-				"description": "You should be able to find several indispensable facts about motivation in the following paragraphs.",
+				"title": "Companion IoT mobile application",
+				"description": "The app allows you to monitor and control the VFD without opening the physical enclosures, which greatly improves safety during maintenance",
 				"link": "#",
 				"image": "assetIconProject3"
 			}
 		]
 	},
 	"features": {
-		"heading": "Deation & Evaluation Best Way to Kick",
+		"heading": "Solving complex needs for digital products",
 		"list": [
 			{
-				"title": "Product Design Sprint",
-				"excerpt": "A five-day workshop that will help you answer crucial business questions",
+				"title": "Creative",
+				"excerpt": "Search for new and innovative communication solutions at the intersection of technology and design",
 				"link": "#"
 			},
 			{
-				"title": "Scoping Session",
-				"excerpt": "A workshop aimed at shaping your business idea, answering questions regarding project planning",
+				"title": "Strategy",
+				"excerpt": "Systemic and integrated approach to communicating with the consumer in an interactive media environment",
 				"link": "#"
 			},
 			{
-				"title": "UX Review",
-				"excerpt": "An evaluation which will help you radically improve your product.",
+				"title": "Production",
+				"excerpt": "Search for new talents and attract ideas so that the brand is always satisfied",
 				"link": "#"
 			},
 			{
-				"title": "Code Review",
-				"excerpt": "Do you know what one of the key secrets of success is what makes people successful in business",
+				"title": "Service",
+				"excerpt": "Serve your entire company by creating customized enterprise application platforms that focus on customers and employees that integrate your systems and processes",
 				"link": "#"
 			}
 		]
@@ -121,13 +121,13 @@
 			"title": "Phone",
 			"data": [
 				{
-					"name": "+32 50 31 28 32",
-					"value": "tel:+3250312832"
+					"name": "+1 321-251-4702",
+					"value": "tel:+13212514702"
 				}
 			]
 		},
 		"email": {
-			"title": "Get in Touch",
+			"title": "Email",
 			"data": [
 				{
 					"name": "info@lithium.com",
@@ -237,6 +237,6 @@
 		}
 	],
 	"slogan": {
-		"text": "Let’s make something amazing together"
+		"text": "Improve and grow for digital products"
 	}
 }
