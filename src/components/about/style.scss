@@ -4,4 +4,8 @@
 	> *:not(:last-child) {
 		margin-bottom: em($spacing_100);
 	}
+
+	&_subheading {
+		text-transform: uppercase;
+	}
 }

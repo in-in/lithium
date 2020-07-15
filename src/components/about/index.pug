@@ -4,7 +4,7 @@ include ../text/index.pug
 
 mixin about()
 	div(class=s.about)&attributes(attributes)
-		+text(d.about.subheading)
+		+text(d.about.subheading)(class=s.about_subheading)
 		+heading({text: d.about.heading, tag: 'h2', modifier: 'h2'})
 		+text(d.about.description)
 		+link('Read more insights', '#')
