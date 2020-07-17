@@ -3,6 +3,7 @@
 .link {
 	display: inline-flex;
 	align-items: center;
+	width: max-content;
 	color: $color_base_schnipo;
 	font-size: $size_font_ms_0 + em;
 	font-weight: $typography_weight_links;
