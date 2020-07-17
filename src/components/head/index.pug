@@ -2,6 +2,7 @@ block head
 	- let title = 'Lithium';
 
 	include ../meta/index.pug
+	include ../favicon/index.pug
 
 	each css in htmlWebpackPlugin.files.css
 		if css.includes('inline')
