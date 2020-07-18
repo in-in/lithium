@@ -1,12 +1,12 @@
 <h1 align="center">
   <br>
-  <a href=""><img src="https://user-images.githubusercontent.com/8797432/87796584-3b8a1500-c852-11ea-870a-db59658aa029.png" alt="Lithium" title="Lithium" width="100" height="100"></a>
+  <a href="https://lithia.vercel.app"><img src="https://user-images.githubusercontent.com/8797432/87796584-3b8a1500-c852-11ea-870a-db59658aa029.png" alt="Lithium" title="Lithium" width="100" height="100"></a>
   <br>
   Lithium
   <br>
 </h1>
 
-<p align="center">Lithium is an international design & development agency. Help invent and accelerate your digital reality by creating the experience that people and companies want.</p>
+<p align="center">An adaptive and mobile friendly landing page for an international design and development agency. Lithium is a fully responsive website, which means it is optimized for various device sizes.</p>
 
 <h4 align="center">
 	<a href="#target-browsers">Target Browsers</a>
