@@ -8,7 +8,6 @@ const PATHS = {
 	get 'dist'() { return path.resolve(this.root, 'dist'); },
 	get 'config'() { return path.resolve(this.root, '.config'); },
 	get 'templates'() { return path.join(this.config, 'templates'); },
-	get 'tmp'() { return path.resolve(this.root, 'tmp'); },
 	get 'components'() { return path.resolve(this.src, 'components'); },
 	get 'pages'() { return path.resolve(this.src, 'pages'); },
 	get 'styles'() { return path.resolve(this.src, 'styles'); },

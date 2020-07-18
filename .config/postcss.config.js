@@ -10,7 +10,7 @@ const saveJSON = (fileName, json) => {
 	}
 	const { name } = path.parse(fileName);
 	const jsonFileName = path.resolve(
-		PATHS.tmp,
+		PATHS.styles,
 		isDev ? `${name}.development.json` : `${name}.production.json`,
 	);
 	fs.writeFileSync(jsonFileName, JSON.stringify(json));
