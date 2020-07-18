@@ -17,7 +17,6 @@ pids
 .yarn/build-state.yml
 .yarn/unplugged
 node_modules/
-package-lock.json
 
 # cache
 .cache
