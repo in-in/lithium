@@ -36,11 +36,7 @@
 	&_heading {
 		text-transform: uppercase;
 
-		@include truncate_multiline_text(
-			$breakpoint: 2,
-			$lh: $size_line_height_heading,
-			$min-height: true,
-			$color-bg: $color_base_husky);
+		@include truncate_text();
 	}
 
 	&_excerpt {
