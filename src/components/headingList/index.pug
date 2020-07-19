@@ -10,4 +10,8 @@ mixin headingList(list)
 			each item in data
 				- let {name, value} = item;
 				li(class=s.headingList_item)
-					+link(name, value, icon=false)(class=s.headingList_link)
+					+link({
+						str: name,
+						href: value,
+						theme: 'dark',
+						icon: false})(class=s.headingList_link)

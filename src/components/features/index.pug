@@ -7,7 +7,7 @@ mixin feature(data)
 	li(class=s.feature)&attributes(attributes)
 		+heading({text: title, tag: 'h3', modifier: 'h4'})(class=s.feature_heading)
 		+text(excerpt)(class=s.feature_excerpt)
-		+link('Read more', link)
+		+link({str: 'Read more', href: link})
 
 mixin features(list)
 	div(class=s.features)&attributes(attributes)
