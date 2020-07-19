@@ -22,6 +22,7 @@ $root: null !default;
 	#{$root}_inner {
 		grid-row: 2 / span 3;
 		grid-column: #{$grid_full};
+		height: max-content;
 
 		@include breakpoint(s) {
 			grid-column: #{$grid_inner};
