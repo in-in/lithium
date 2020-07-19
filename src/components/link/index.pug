@@ -4,5 +4,6 @@ mixin link(prop)
 		href= href
 		class=cx(s.link, { [s.link__icon]: icon }, s[`link__${theme}`])
 		target='_blank'
+		rel='noopener noreferrer'
 		)&attributes(attributes)
 		span(class=s.link_text)= str
