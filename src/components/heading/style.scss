@@ -3,10 +3,6 @@
 .heading {
 	font-weight: $typography_weight_bold;
 
-	&__light {
-		color: $color_font_light;
-	}
-
 	&__h1 {
 		font-size: $size_font_ms_u_5 + em;
 	}
