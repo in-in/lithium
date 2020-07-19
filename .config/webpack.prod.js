@@ -115,7 +115,7 @@ const config = {
 	'module': {
 		'rules': [
 			styles,
-			images,
+			// images,
 		],
 	},
 };
