@@ -1,6 +1,5 @@
 export const assetFontPath = "../assets/fonts/";
 export const assetFontMainWoff2 = "Raleway";
-export const assetFontSecondaryWoff2 = "Inconsolata";
 export const assetIconLogo = "logo.svg";
 export const assetIconPartners1 = "mozilla.svg";
 export const assetIconPartners2 = "zoho.svg";
