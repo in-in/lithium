@@ -38,7 +38,7 @@
 		"postcss-modules": "3.2.0",
 		"postcss-normalize": "9.0.0",
 		"postcss-sort-media-queries": "1.31.21",
-		"pug": "3.0.0",
+		"pug": "3.0.1",
 		"pug-lint": "2.6.0",
 		"pug-loader": "2.4.0",
 		"sass": "1.26.10",
